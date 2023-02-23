@@ -1,0 +1,68 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+    --background: #FAF1CF;
+    --font: #3F6844;
+    --contrast: #5DAA68;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+a.navbar-brand, .nav-item > a {
+    color: white;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.content {
+    color: var(--font);
+}
+
+main {
+    background-image: url(images/pho.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+footer {
+    background-color: var(--contrast);
+}
+
+.footer-info {
+    padding: 24px;
+}
+
+.footer-info p {
+    margin: 0;
+}
+
+.social {
+    margin-bottom: 8px;
+}
+
+.social-icon {
+    display: flex;
+}
