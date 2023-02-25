@@ -1,3 +1,6 @@
+import github_icon from './images/github.svg';
+import facebook_icon from './images/facebook.svg';
+
 // Generate the footer HTML
 function footer() {
     const footer = document.createElement('footer');
@@ -18,8 +21,8 @@ function footer() {
     social_icon.classList.add('social-icon');
     social_icon.href = "https://www.facebook.com/GreenTeaHouseGlenelg";
     social_icon.target = "_blank";
-    const social_img = document.createElement('img');
-    social_img.src = "../src/images/facebook.svg";
+    const social_img = new Image();
+    social_img.src = facebook_icon;
     social_img.alt = "Facebook Icon";
     social_icon.appendChild(social_img);
     social.appendChild(social_title);
@@ -42,7 +45,7 @@ function footer() {
     // Address
     col = document.createElement('div');
     col.classList.add('col-sm', 'pb-3');
-    
+
     const address_obj = {"Address:": "h6", "22 Jetty Road": "p", "Glenelg SA 5045": "p"};
     for(const addr in address_obj) {
         let address = document.createElement(address_obj[addr]);
@@ -80,8 +83,8 @@ function footer() {
     developed_by.innerText = "Developed by Andy Phan ";
     const github = document.createElement('a');
     github.href = "https://github.com/xapzx";
-    const img = document.createElement('img');
-    img.src = "../src/images/github.svg";
+    const img = new Image();
+    img.src = github_icon;
     img.alt = "Github Icon";
     github.appendChild(img);
     developed_by.appendChild(github);
