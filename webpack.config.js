@@ -35,12 +35,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
       },
     ],
   },

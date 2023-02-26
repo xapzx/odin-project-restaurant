@@ -3,6 +3,9 @@ function home() {
     const element = document.createElement('main');
     const nav = navbar();
     element.appendChild(nav);
+    const container = document.createElement('div');
+    container.classList.add('menu-container');
+    element.appendChild(container);
  
     return element;
  }

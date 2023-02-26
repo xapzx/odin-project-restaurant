@@ -3,6 +3,8 @@ import facebook_icon from './images/facebook.svg';
 
 // Generate the footer HTML
 function footer() {
+    const facebook_link = "https://www.facebook.com/GreenTeaHouseGlenelg";
+    const github_link = "https://github.com/xapzx";
     const footer = document.createElement('footer');
     const container = document.createElement('div');
     container.classList.add('footer-info', 'container');
@@ -19,7 +21,7 @@ function footer() {
     social_title.innerText = 'Social:';
     const social_icon = document.createElement('a');
     social_icon.classList.add('social-icon');
-    social_icon.href = "https://www.facebook.com/GreenTeaHouseGlenelg";
+    social_icon.href = facebook_link;
     social_icon.target = "_blank";
     const social_img = new Image();
     social_img.src = facebook_icon;
@@ -61,7 +63,7 @@ function footer() {
     hours.innerText = "Business Hours:";
     col.appendChild(hours);
     
-    hours = {"Monday:": "Closed", "Tues - Sun:": "12:00 - 3:00 PM", "": "5:00 - 8:00 PM"};
+    hours = {"Monday:": "Closed", "Tues - Sun:": "12:00 - 3:00 PM", "": "5:00 - 9:00 PM"};
     for(const time in hours) {
         let business_row = document.createElement('div');
         business_row.classList.add('row')
@@ -82,7 +84,7 @@ function footer() {
     developed_by.classList.add('text-center');
     developed_by.innerText = "Developed by Andy Phan ";
     const github = document.createElement('a');
-    github.href = "https://github.com/xapzx";
+    github.href = github_link;
     const img = new Image();
     img.src = github_icon;
     img.alt = "Github Icon";
@@ -92,7 +94,7 @@ function footer() {
     container.appendChild(row);
     footer.appendChild(container);
     footer.appendChild(developed_by);
-    return footer; 
+    return footer;
 }
 
 export default footer;
