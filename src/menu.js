@@ -329,6 +329,7 @@ function menu() {
     return generateMenu(menu_items_mains);
 }
 
+let item_id = 1;
 function generateMenu(menu_list) {
     const container = document.createElement('div');
     container.classList.add('menu', 'container', 'p-3');
@@ -346,7 +347,16 @@ function generateMenu(menu_list) {
             for(const menu in menu_list[count]) {
                 const menu_element = document.createElement(menu_items_html[menu_i]);
                 menu_element.className = menu_items_class[menu_i];
-                menu_element.innerText = menu_list[count][menu];
+
+                if(menu === 'price') {
+                    menu_element.innerText = "$" + menu_list[count][menu];
+                } else if(menu === "name") {
+                    menu_element.innerText = "#" + item_id + " " + menu_list[count][menu];
+                    item_id++;
+                } else {
+                    menu_element.innerText = menu_list[count][menu];
+                }
+                
                 col.appendChild(menu_element);
                 menu_i++;
             }
