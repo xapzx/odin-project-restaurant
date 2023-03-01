@@ -71,12 +71,12 @@ const menu_items_entree = [
     },
     {
         'price': 13.90,
-        'name': 'Indonedian Chicken Satay',
+        'name': 'Indonesian Chicken Satay',
         'desc': 'Grilled seasoned chicken satay skewers topped with home made satay sauce (3pcs)',
     },
     {
         'price': 13.90,
-        'name': 'Thai Panda Chicken',
+        'name': 'Thai Pandan Chicken',
         'desc': 'Grilled marinated chicken in herbs and lemongrass wrapped in pandan leaves',
     },
 ];
@@ -298,6 +298,9 @@ const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc']
 
 // Create container and append generated HTML for menu items with titles
 function menu() {
+    item_id = 1;
+    const main = document.querySelector('main');
+    // const menu = document.querySelector('.menu-container');
     const container = document.createElement('div');
     container.classList.add('menu', 'container', 'p-3');
     
@@ -311,8 +314,9 @@ function menu() {
     container.appendChild(generateMenu(menu_items_salads, "Goi/Salads"));
     container.appendChild(generateMenu(menu_items_favourites, "Favourites"));
     container.appendChild(generateMenu(menu_items_banquet, "Banquet"));
-
-    return container;
+    // menu.appendChild(container);
+    main.appendChild(container);
+    return menu;
 }
 
 // Generate HTML for menu items

@@ -1,13 +1,13 @@
 // Create Home page
 function home() {
+    const content = document.querySelector('#content');
+    content.appendChild(navbar());
     const element = document.createElement('main');
-    const nav = navbar();
-    element.appendChild(nav);
-    const container = document.createElement('div');
-    container.classList.add('menu-container');
-    element.appendChild(container);
- 
-    return element;
+    // const container = document.createElement('div');
+    // container.classList.add('menu-container');
+    // element.appendChild(container);
+    content.appendChild(element);
+    return content;
  }
 
 // Create nav bar
@@ -58,6 +58,7 @@ function navItem(items) {
     for(const item of items) {
         let nav_item = document.createElement('li');
         nav_item.classList.add('nav-item');
+
         let nav_link = document.createElement('a');
         nav_link.classList.add('nav-link');
 
@@ -65,15 +66,33 @@ function navItem(items) {
             nav_link.classList.add('active');
             nav_link.setAttribute('aria-current', 'page');
         }
-        
+
+        nav_link.id = item.toLowerCase() + '-btn';
         nav_link.href = "#";
         nav_link.innerText = item;
+
+        nav_link.addEventListener("click", (e) => {
+            activateButton(nav_link);
+        });
+
         nav_item.appendChild(nav_link);
         ul.appendChild(nav_item);
 
         flag++;
     }
     return ul;
+}
+
+function activateButton(button) {
+    const buttons = document.querySelectorAll(".nav-link");
+  
+    buttons.forEach((button) => {
+      if (button !== this) {
+        button.classList.remove("active");
+      }
+    });
+  
+    button.classList.add("active");
 }
 
 export default home;

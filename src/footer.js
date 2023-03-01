@@ -5,6 +5,7 @@ import facebook_icon from './images/facebook.svg';
 function footer() {
     const facebook_link = "https://www.facebook.com/GreenTeaHouseGlenelg";
     const github_link = "https://github.com/xapzx";
+    const content = document.querySelector('#content');
     const footer = document.createElement('footer');
     const container = document.createElement('div');
     container.classList.add('footer-info', 'container');
@@ -95,7 +96,8 @@ function footer() {
     container.appendChild(row);
     footer.appendChild(container);
     footer.appendChild(developed_by);
-    return footer;
+    content.appendChild(footer);
+    return content;
 }
 
 export default footer;

@@ -9,8 +9,26 @@ import home from "./home.js"
 import footer from "./footer.js";
 import menu from "./menu.js";
 
-const content = document.querySelector('.content');
+// Initial page load
+home();
+footer();
 
-content.appendChild(home());
-document.querySelector('.menu-container').appendChild(menu());
-content.appendChild(footer());
+// Add functionality to nav bar buttons
+const home_btn = document.querySelector('#home-btn');
+const menu_btn = document.querySelector('#menu-btn');
+const contact_btn = document.querySelector('#contact-btn');
+
+const main = document.querySelector('main');
+home_btn.addEventListener('click', () => {
+    main.innerHTML = "";
+});
+
+menu_btn.addEventListener('click', () => {
+    main.innerHTML = "";
+    menu();
+});
+
+contact_btn.addEventListener('click', () => {
+    main.innerHTML = "";
+    contact_btn();
+});
