@@ -296,43 +296,34 @@ const menu_items_banquet = [
 const menu_items_html = ['span', 'div', 'div'];
 const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc'];
 
-// Generate HTML for each menu item
-// Rows of 3 items
+// Create container and append generated HTML for menu items with titles
 function menu() {
-
-    // const container = document.createElement('div');
-    // container.classList.add('menu', 'container', 'p-3');
-
-    // let count = 0;
-    // for(let row_i = 0; row_i < menu_items_entree.length/3; row_i++) {
-    //     const row = document.createElement('div');
-    //     row.className = 'row';
-
-    //     for(let col_i = 0; col_i < 3; col_i++) {
-    //         const col = document.createElement('div');
-    //         col.classList.add('col-sm', 'pb-3');
-
-    //         let menu_i = 0;
-    //         for(const menu in menu_items_entree[count]) {
-    //             const menu_element = document.createElement(menu_items_html[menu_i]);
-    //             menu_element.className = menu_items_class[menu_i];
-    //             menu_element.innerText = menu_items_entree[count][menu];
-    //             col.appendChild(menu_element);
-    //             menu_i++;
-    //         }
-    //         row.appendChild(col);
-    //         count++;
-    //     }
-    //     container.appendChild(row);
-    // }
-    // return container;
-    return generateMenu(menu_items_mains);
-}
-
-let item_id = 1;
-function generateMenu(menu_list) {
     const container = document.createElement('div');
     container.classList.add('menu', 'container', 'p-3');
+    
+    const menu_section_title = document.createElement('div');
+    menu_section_title.classList.add('text-center', 'menu-title');
+    menu_section_title.innerText = "Menu";
+    container.appendChild(menu_section_title);
+
+    container.appendChild(generateMenu(menu_items_entree, "Entree"));
+    container.appendChild(generateMenu(menu_items_mains, "Mon An Chinh/Mains"));
+    container.appendChild(generateMenu(menu_items_salads, "Goi/Salads"));
+    container.appendChild(generateMenu(menu_items_favourites, "Favourites"));
+    container.appendChild(generateMenu(menu_items_banquet, "Banquet"));
+
+    return container;
+}
+
+// Generate HTML for menu items
+// Rows of 3 items
+let item_id = 1;
+function generateMenu(menu_list, sub_menu) {
+    const container = document.createElement('div');
+    const menu_section_title = document.createElement('div');
+    menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2');
+    menu_section_title.innerText = sub_menu;
+    container.appendChild(menu_section_title);
 
     let count = 0;
     for(let row_i = 0; row_i < menu_list.length/3; row_i++) {

@@ -84,6 +84,7 @@ function footer() {
     developed_by.classList.add('text-center');
     developed_by.innerText = "Developed by Andy Phan ";
     const github = document.createElement('a');
+    github.target = "_blank";
     github.href = github_link;
     const img = new Image();
     img.src = github_icon;
