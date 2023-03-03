@@ -1,16 +1,14 @@
 // Create Home page
+// Appends the Navbar and Main section to the HTML file
 function home() {
     const content = document.querySelector('#content');
     content.appendChild(navbar());
     const element = document.createElement('main');
-    // const container = document.createElement('div');
-    // container.classList.add('menu-container');
-    // element.appendChild(container);
     content.appendChild(element);
-    return content;
  }
 
 // Create nav bar
+// Returns JS generated Navbar HTML
 function navbar() {
     const nav = document.createElement('nav');
     nav.classList.add('navbar', 'navbar-expand-lg');
@@ -51,7 +49,7 @@ function navbar() {
 // Create nav items
 // Parameter: Array of strings
 function navItem(items) {
-    let flag = 0;
+    let first = 1;
     const ul = document.createElement('ul');
     ul.classList.add('navbar-nav');
 
@@ -62,7 +60,7 @@ function navItem(items) {
         let nav_link = document.createElement('a');
         nav_link.classList.add('nav-link');
 
-        if(!flag) {
+        if(flag) {
             nav_link.classList.add('active');
             nav_link.setAttribute('aria-current', 'page');
         }
@@ -78,11 +76,13 @@ function navItem(items) {
         nav_item.appendChild(nav_link);
         ul.appendChild(nav_item);
 
-        flag++;
+        first = 0;
     }
     return ul;
 }
 
+// Add 'active' class to given element and remove from the rest
+// Parameter: Element to add 'active' class (One of the navbar items)
 function activateButton(button) {
     const buttons = document.querySelectorAll(".nav-link");
   

@@ -30,5 +30,5 @@ menu_btn.addEventListener('click', () => {
 
 contact_btn.addEventListener('click', () => {
     main.innerHTML = "";
-    contact_btn();
+    // contact_btn();
 });

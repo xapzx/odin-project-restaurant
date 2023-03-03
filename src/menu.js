@@ -1,3 +1,4 @@
+// Array of entree menu item objects
 const menu_items_entree = [
     {
         'price': 11.90, 
@@ -81,6 +82,7 @@ const menu_items_entree = [
     },
 ];
 
+// Array of mains menu item objects
 const menu_items_mains = [
     {
         'price': 22.90,
@@ -229,6 +231,7 @@ const menu_items_mains = [
     },
 ];
 
+// Array of salad menu item objects
 const menu_items_salads = [
     {
         'price': 23.90,
@@ -247,6 +250,7 @@ const menu_items_salads = [
     },
 ];
 
+// Array of favourite menu item objects
 const menu_items_favourites = [
     {
         'price': 13.90,
@@ -285,6 +289,7 @@ const menu_items_favourites = [
     },
 ];
 
+// Array of banquet object
 const menu_items_banquet = [
     {
         'price': 65.00,
@@ -296,11 +301,10 @@ const menu_items_banquet = [
 const menu_items_html = ['span', 'div', 'div'];
 const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc'];
 
-// Create container and append generated HTML for menu items with titles
+// Append generated HTML for all menu items with sub-titles to the main section
 function menu() {
     item_id = 1;
     const main = document.querySelector('main');
-    // const menu = document.querySelector('.menu-container');
     const container = document.createElement('div');
     container.classList.add('menu', 'container', 'p-3');
     
@@ -314,13 +318,13 @@ function menu() {
     container.appendChild(generateMenu(menu_items_salads, "Goi/Salads"));
     container.appendChild(generateMenu(menu_items_favourites, "Favourites"));
     container.appendChild(generateMenu(menu_items_banquet, "Banquet"));
-    // menu.appendChild(container);
     main.appendChild(container);
-    return menu;
 }
 
-// Generate HTML for menu items
+// Generate HTML for menu items section
 // Rows of 3 items
+// Parameters: Array of menu item objects, title for menu section
+// Returns HTML for a section of menu items in rows of 3 items
 let item_id = 1;
 function generateMenu(menu_list, sub_menu) {
     const container = document.createElement('div');

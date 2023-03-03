@@ -1,10 +1,11 @@
 import github_icon from './images/github.svg';
 import facebook_icon from './images/facebook.svg';
 
-// Generate the footer HTML
+// Append JS generated footer to the #content section
 function footer() {
     const facebook_link = "https://www.facebook.com/GreenTeaHouseGlenelg";
     const github_link = "https://github.com/xapzx";
+
     const content = document.querySelector('#content');
     const footer = document.createElement('footer');
     const container = document.createElement('div');
@@ -97,7 +98,6 @@ function footer() {
     footer.appendChild(container);
     footer.appendChild(developed_by);
     content.appendChild(footer);
-    return content;
 }
 
 export default footer;
