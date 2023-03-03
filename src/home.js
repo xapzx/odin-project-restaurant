@@ -60,7 +60,7 @@ function navItem(items) {
         let nav_link = document.createElement('a');
         nav_link.classList.add('nav-link');
 
-        if(flag) {
+        if(first) {
             nav_link.classList.add('active');
             nav_link.setAttribute('aria-current', 'page');
         }
