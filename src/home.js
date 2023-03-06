@@ -101,8 +101,10 @@ function activateButton(button) {
 // Create headline for the home page
 function main() {
     const element = document.createElement('main');
-    element.classList.add('container', 'headline');
-    element.textContent = "Experience Authentic Vietnamese Cuisine at Green Tea House!";
+    const headline = document.createElement('div')
+    headline.classList.add('container', 'headline');
+    headline.textContent = "Experience Authentic Vietnamese Cuisine at Green Tea House!";
+    element.appendChild(headline);
     return element;
 }
 

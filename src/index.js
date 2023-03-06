@@ -19,16 +19,19 @@ const menu_btn = document.querySelector('#menu-btn');
 const contact_btn = document.querySelector('#contact-btn');
 
 const main = document.querySelector('main');
+const content = document.querySelector('#content');
 home_btn.addEventListener('click', () => {
-    main.innerHTML = "";
+    document.querySelector('.menu').remove();
+    document.querySelector('.desc-container').style.display = 'block';
+    document.querySelector('.headline').style.display = 'block';
 });
 
 menu_btn.addEventListener('click', () => {
-    main.innerHTML = "";
+    document.querySelector('.desc-container').style.display = 'none';
+    document.querySelector('.headline').style.display = 'none';
     menu();
 });
 
 contact_btn.addEventListener('click', () => {
-    main.innerHTML = "";
     // contact_btn();
 });
