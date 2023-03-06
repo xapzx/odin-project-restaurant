@@ -1,7 +1,7 @@
 # odin-project-restaurant
 Project: Restaurant Page
 
-Live Preview: 
+Live Preview: https://xapzx.github.io/odin-project-restaurant
 
 This project is apart of The Odin Project Foundations Course. The aim of this project is to practice DOM manipulation by dynamically rendering a simple restaurant homepage.
 

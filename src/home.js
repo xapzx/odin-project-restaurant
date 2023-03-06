@@ -72,7 +72,6 @@ function navItem(items) {
         }
 
         nav_link.id = item.toLowerCase() + '-btn';
-        // nav_link.href = "#";
         nav_link.innerText = item;
 
         if(item === "HOME") {
