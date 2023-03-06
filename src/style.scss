@@ -49,6 +49,10 @@ a.navbar-brand, .nav-item > a {
     color: white;
 }
 
+.nav-item {
+    cursor: pointer;
+}
+
 main {
     min-height: 100vh;
     padding: 24px;

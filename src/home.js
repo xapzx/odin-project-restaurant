@@ -1,4 +1,6 @@
 import gth_icon from './images/gth.jpeg';
+import footer from './footer.js'
+import menu from './menu.js'
 
 // Create Home page
 // Appends the Navbar and Main section to the HTML file
@@ -52,6 +54,7 @@ function navbar() {
 // Create nav items
 // Parameter: Array of strings
 function navItem(items) {
+    const content = document.querySelector('#content');
     let first = 1;
     const ul = document.createElement('ul');
     ul.classList.add('navbar-nav');
@@ -69,8 +72,25 @@ function navItem(items) {
         }
 
         nav_link.id = item.toLowerCase() + '-btn';
-        nav_link.href = "#";
+        // nav_link.href = "#";
         nav_link.innerText = item;
+
+        if(item === "HOME") {
+            nav_link.addEventListener('click', () => {
+                content.textContent = '';
+                home();
+                footer();
+            });
+        } else if(item === "MENU") {
+            nav_link.addEventListener('click', () => {
+                if(nav_link.classList.contains('active')) {
+                    return;
+                }
+                document.querySelector('main').textContent = '';
+                document.querySelector('.desc-container').remove();
+                menu();
+            });
+        }
 
         nav_link.addEventListener("click", (e) => {
             activateButton(nav_link);
