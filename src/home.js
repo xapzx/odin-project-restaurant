@@ -1,10 +1,11 @@
+import gth_icon from './images/gth.jpeg';
+
 // Create Home page
 // Appends the Navbar and Main section to the HTML file
 function home() {
     const content = document.querySelector('#content');
     content.appendChild(navbar());
-    const element = document.createElement('main');
-    content.appendChild(element);
+    content.appendChild(main());
     content.appendChild(information());
  }
 
@@ -17,10 +18,11 @@ function navbar() {
     const container = document.createElement('div');
     container.classList.add('container-fluid');
 
-    const logo = document.createElement('a');
+    const logo = document.createElement('img');
     logo.classList.add('navbar-brand');
-    logo.href = '#';
-    logo.innerText = "GREEN TEA HOUSE";
+    logo.src = gth_icon;
+    // logo.href = '#';
+    // logo.innerText = "GREEN TEA HOUSE";
 
     const btn = document.createElement('button');
     btn.classList.add('navbar-toggler', 'navbar-dark');
@@ -96,8 +98,17 @@ function activateButton(button) {
     button.classList.add("active");
 }
 
+// Create headline for the home page
+function main() {
+    const element = document.createElement('main');
+    element.classList.add('container', 'headline');
+    element.textContent = "Experience Authentic Vietnamese Cuisine at Green Tea House!";
+    return element;
+}
+
 const description = "Green Tea House Glenelg is a family-owned Vietnamese restaurant located in the heart of Glenelg, South Australia. We offer a varied menu with a focus on traditional Vietnamese cuisine. Our dishes are made with fresh, locally sourced ingredients, and our recipes are based on authentic family recipes. Our welcoming atmosphere and friendly staff make Green Tea House Glenelg the perfect spot for a meal with friends and family. Come on in and join us for a unique dining experience!";
 
+// Creates the about us section
 function information() {
     const container = document.createElement('div');
     container.className = "desc-container"

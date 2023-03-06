@@ -40,12 +40,25 @@ body {
 }
 
 // Nav-bar
+.navbar-brand {
+    max-width: 150px;
+    max-height: 150px;
+}
+
 a.navbar-brand, .nav-item > a {
     color: white;
 }
 
 main {
     min-height: 100vh;
+}
+
+.headline {
+    padding-top: 30vh;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(2rem, 2.2vw, 2.5rem);
+    text-align: center;
 }
 
 // Description Section
