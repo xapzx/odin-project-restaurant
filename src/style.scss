@@ -29,7 +29,7 @@ body {
 
 #content {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr auto auto;
     min-height: 100vh;
     background-image: url(images/pho.jpg);
     background-size: cover;
@@ -46,6 +46,22 @@ a.navbar-brand, .nav-item > a {
 
 main {
     min-height: 100vh;
+}
+
+// Description Section
+.desc-container {
+    background-color: var(--background);
+    padding: 24px 0;
+    text-align: center;
+}
+
+.desc {
+    padding: 18px;
+}
+
+.about-title {
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    font-weight: bold;
 }
 
 // Menu

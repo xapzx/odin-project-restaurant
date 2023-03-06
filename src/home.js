@@ -5,6 +5,7 @@ function home() {
     content.appendChild(navbar());
     const element = document.createElement('main');
     content.appendChild(element);
+    content.appendChild(information());
  }
 
 // Create nav bar
@@ -93,6 +94,23 @@ function activateButton(button) {
     });
   
     button.classList.add("active");
+}
+
+const description = "Green Tea House Glenelg is a family-owned Vietnamese restaurant located in the heart of Glenelg, South Australia. We offer a varied menu with a focus on traditional Vietnamese cuisine. Our dishes are made with fresh, locally sourced ingredients, and our recipes are based on authentic family recipes. Our welcoming atmosphere and friendly staff make Green Tea House Glenelg the perfect spot for a meal with friends and family. Come on in and join us for a unique dining experience!";
+
+function information() {
+    const container = document.createElement('div');
+    container.className = "desc-container"
+    const title = document.createElement('div');
+    title.className = "about-title";
+    title.textContent = "About";
+    container.appendChild(title);
+    const about = document.createElement('div');
+    about.classList.add('desc', 'container');
+    about.textContent = description;
+    container.appendChild(about);
+
+    return container;
 }
 
 export default home;
