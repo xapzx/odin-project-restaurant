@@ -16,13 +16,6 @@ html {
     min-height: 100vh;
 }
 
-@media only screen and (max-device-width: 480px) {
-    html {
-      height: calc(100% + 60px);
-      min-height: calc(100% + 60px);
-    }
-}
-
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
@@ -37,7 +30,7 @@ body {
 #content {
     display: grid;
     grid-template-rows: 1fr auto auto;
-    min-height: 100vh;
+    // min-height: 100vh;
     background-image: url(images/pho.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,6 +40,14 @@ body {
 }
 
 // Nav-bar
+#navbarNav ul li{
+    position: relative;
+}
+
+#navbarNav ul{
+    position: absolute;
+}
+
 .navbar-brand {
     max-width: 150px;
     max-height: 150px;
@@ -77,7 +78,7 @@ main .social-icon > img{
 }
 
 .headline {
-    padding-top: 30vh;
+    padding-top: 25vh;
     color: white;
     font-weight: bold;
     font-size: clamp(2rem, 2.2vw, 2.5rem);
@@ -159,4 +160,16 @@ footer {
 
 .social-icon {
     display: flex;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    html {
+      height: calc(100% + 60px);
+      min-height: calc(100% + 60px);
+    }
+
+    .headline {
+        padding-top: 15vh;
+    }
 }
