@@ -2,6 +2,12 @@ import gth_icon from './images/gth.jpeg';
 import footer from './footer.js'
 import menu from './menu.js'
 import contact from './contact.js'
+import bbh from './images/bbh.jpg'
+import chicken from './images/chicken.jpg'
+import coldrolls from './images/coldrolls.jpg'
+import rice from './images/friedrice.jpg'
+import laksa from './images/laksa.jpg'
+import padthai from './images/padthai.jpg'
 
 // Create Home page
 // Appends the Navbar and Main section to the HTML file
@@ -10,6 +16,7 @@ function home() {
     content.appendChild(navbar());
     content.appendChild(main());
     content.appendChild(information());
+    content.appendChild(gallery());
  }
 
 // Create nav bar
@@ -90,6 +97,10 @@ function navItem(items) {
                 if(document.querySelector('.desc-container') !== null) {
                     document.querySelector('.desc-container').remove();
                 }
+
+                if(document.querySelector('.gallery') !== null) {
+                    document.querySelector('.gallery').remove();
+                }
                 
                 document.querySelector('main').textContent = '';
                 menu();
@@ -102,6 +113,10 @@ function navItem(items) {
 
                 if(document.querySelector('.desc-container') !== null) {
                     document.querySelector('.desc-container').remove();
+                }
+
+                if(document.querySelector('.gallery') !== null) {
+                    document.querySelector('.gallery').remove();
                 }
 
                 document.querySelector('main').textContent = '';
@@ -160,6 +175,34 @@ function information() {
     about.textContent = description;
     container.appendChild(about);
 
+    return container;
+}
+
+const gallery_img = [bbh, chicken, coldrolls, rice, laksa, padthai];
+function gallery() {
+    const container = document.createElement('div');
+    container.classList.add('gallery', 'text-center');
+
+    // const gallery_title = document.createElement('div');
+    // gallery_title.classList.add("about-title", 'pb-4');
+    // // gallery_title.textContent = "Photos";
+    // container.appendChild(gallery_title);
+
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    const col = document.createElement('div');
+    col.className = 'col';
+
+    for(const image of gallery_img) {
+        let img = new Image();
+        img.src = image;
+        img.alt = "Image of restaurant dishes";
+        col.appendChild(img);
+        row.appendChild(col);
+    }
+
+    container.appendChild(row);
     return container;
 }
 
