@@ -2,28 +2,28 @@
 const menu_items_entree = [
     {
         'price': 11.90, 
-        'name': 'Cha Gio Ha Noi', 
-        'desc': 'Mum\'s special Northern style seafood spring rolls (4 pcs)',
+        'name': 'Cha Gio Ha Noi (CG)', 
+        'desc': 'Mum\'s special northern style seafood spring rolls (4 pcs)',
     },
     {
         'price': 10.90,
-        'name': 'Cha Gio Rau (VG:CG)',
+        'name': 'Cha Gio Rau (VG, CG)',
         'desc': 'Vegetarian spring rolls (3 pcs)',
     },
     {
         'price': 10.90,
-        'name': 'Cha Gio Saigon',
+        'name': 'Cha Gio Saigon (CG)',
         'desc': 'Southern style pork spring rolls (3 pcs)',
     },
     {
         'price': 10.90,
         'name': 'Goi Cuon (VGO)',
-        'desc': 'Rice paper cold rolls with chicken and/or prawns or vegetable and tofu',
+        'desc': 'Rice paper cold rolls with chicken and/or prawns or vegetable and tofu (2 pcs)',
     },
     {
         'price': 14.90,
         'name': 'Banh Khot (VGO)',
-        'desc': 'Traditional mini rice pancakes with shrimp and mince pork',
+        'desc': 'Traditional mini rice pancakes with shrimp and minced pork',
     },
     {
         'price': 5.00,
@@ -33,12 +33,12 @@ const menu_items_entree = [
     {
         'price': 13.90,
         'name': 'Sup Bap Ga (VGO)',
-        'desc': 'Chicken and sweet corn soup',
+        'desc': 'Chicken/tofu and sweet corn soup',
     },
     {
         'price': 15.90,
-        'name': 'Sup Do Bien',
-        'desc': 'Combination seafood and bean burd',
+        'name': 'Sup Do Bien Dau Hu',
+        'desc': 'Combination seafood and bean curd',
     },
     {
         'price': 13.90,
@@ -48,38 +48,38 @@ const menu_items_entree = [
     {
         'price': 13.90,
         'name': 'Nem Nuong Xao',
-        'desc': 'Pork belly meatballs and sichuan sauce',
+        'desc': 'Minced pork belly meatballs and sichuan sauce (3 pcs)',
     },
     {
         'price': 14.90,
         'name': 'Bo La Lot',
-        'desc': 'Grilled minced beef wrapped in wild betel leaf',
+        'desc': 'Grilled minced beef wrapped in wild betel leaf (5 pcs)',
     },
     {
         'price': 14.90,
         'name': 'Chim Cut Nuong',
-        'desc': 'Aunties BBQ quail marinated with herbs and lemongrass',
+        'desc': 'Vietnamese BBQ quail marinated with spicy herbs and lemongrass (1 pcs)',
     },
     {
-        'price': 22.90,
-        'name': 'Muc Rang Muoi (VGO)',
-        'desc': 'Small salt and pepper squid or tofu',
+        'price': 11.90,
+        'name': 'Muc Rang Muoi (VGO, CG)',
+        'desc': 'Small salt and pepper squid OR tofu (Large +$6)',
     },
-    {
-        'price': 13.90,
-        'name': 'Baby Curry Puffs (VG:CG)',
-        'desc': 'Mini pie puffs with diced potatoes and carrots (3 pcs)',
-    },
-    {
-        'price': 13.90,
-        'name': 'Indonesian Chicken Satay',
-        'desc': 'Grilled seasoned chicken satay skewers topped with home made satay sauce (3 pcs)',
-    },
-    {
-        'price': 13.90,
-        'name': 'Thai Pandan Chicken',
-        'desc': 'Grilled marinated chicken in herbs and lemongrass wrapped in pandan leaves',
-    },
+    // {
+    //     'price': 13.90,
+    //     'name': 'Baby Curry Puffs (VG, CG)',
+    //     'desc': 'Mini pie puffs with diced potatoes and carrots (3 pcs)',
+    // },
+    // {
+    //     'price': 13.90,
+    //     'name': 'Indonesian Chicken Satay',
+    //     'desc': 'Grilled seasoned chicken satay skewers topped with home made satay sauce (3 pcs)',
+    // },
+    // {
+    //     'price': 13.90,
+    //     'name': 'Thai Pandan Chicken',
+    //     'desc': 'Grilled marinated chicken in herbs and lemongrass wrapped in pandan leaves',
+    // },
 ];
 
 // Array of mains menu item objects
@@ -87,17 +87,17 @@ const menu_items_mains = [
     {
         'price': 22.90,
         'name': 'Pho Ha Noi',
-        'desc': 'Traditional Vietnamese beef rice noodle soup with sliced rare beef, brisket and meatballs or chicken breast or vegetable and tofu',
+        'desc': 'Traditional Vietnamese beef rice noodle soup with sliced rare beef, brisket and meatballs OR chicken breast OR vegetable and tofu',
     },
     {
         'price': 22.90,
         'name': 'Banh Xeo (VGO)',
-        'desc': 'Crispy savoury Vietnamese pancake with shrimp pork belly, bean sprouts, mint, salad and a dipping sauce',
+        'desc': 'Crispy savoury Vietnamese pancake with shrimp, pork belly, bean sprouts, mint, salad and a dipping sauce',
     },
     {
         'price': 25.90,
         'name': 'Chao Tom',
-        'desc': 'Grilled mince sugarcane king prawns with rice vermicelli, Vietnamese herbs, salad and a dipping sauce (roll your own cold rolls)',
+        'desc': 'Grilled mince sugarcane king prawns with rice vermicelli, Vietnamese herbs, salad and dipping sauce (roll your own cold rolls)',
     },
     {
         'price': 25.90,
@@ -107,27 +107,27 @@ const menu_items_mains = [
     {
         'price': 22.90,
         'name': 'Hu Tieu Xao (VGO)',
-        'desc': 'Fresh flat rice noodles stir fried with vegetables and chicken or vegetables and tofu or seafood (+$3)',
+        'desc': 'Fresh flat rice noodles stir fried with vegetables and chicken OR vegetables and tofu OR seafood (+$3)',
     },
     {
         'price': 22.90,
         'name': 'Xao Xa Ot (VGO)',
-        'desc': 'Lemongrass chilli stir fried with vegetables and tofu or chicken or beef or seafood (+$3)',
+        'desc': 'Lemongrass chilli stir fried with vegetables and tofu OR chicken OR beef OR seafood (+$3)',
     },
     {
         'price': 22.90,
         'name': 'Xao Hat Dieu',
-        'desc': 'Roasted cashew nut stired fried with vegetables and tofu or chicken or beef or seafood (+$3)',
+        'desc': 'Roasted cashews stired fried with vegetables and tofu OR chicken OR beef OR seafood (+$3)',
     },
     {
         'price': 23.90,
-        'name': 'Ca Ra Ga',
+        'name': 'Ca Ri Ga',
         'desc': 'Mum\'s delicious home made Vietnamese coconut curry with turmeric chicken, potatoes and carrots',
     },
     {
         'price': 24.90,
         'name': 'Bo Luc Lac',
-        'desc': 'Vietnamese diced shaking beef stir fried with vegetables and topped with crushed roasted peanuts and cracked pepper',
+        'desc': 'Vietnamese diced "shaking" beef stir fried with capsisum and topped with crushed roasted peanuts and cracked pepper',
     },
     {
         'price': 27.90,
@@ -137,17 +137,17 @@ const menu_items_mains = [
     {
         'price': 27.90,
         'name': 'Ca Kho To',
-        'desc': 'Fish and pork belly cooked in a traditional Vietnamese clay pot',
+        'desc': 'Bone in fish steaks slow cooked in a traditional Vietnamese clay pot in caramelized pork fat sauce',
     },
     {
         'price': 27.90,
         'name': 'Tom Dia Nong',
-        'desc': 'King prawns and vegetables stir fried in a creamy garlic sauce seedbed on a sizzling hot plate',
+        'desc': 'King prawns and vegetables stir fried in a creamy garlic sauce served on a sizzling hot plate',
     },
     {
         'price': 24.90,
         'name': 'Dia Nong',
-        'desc': 'Mongolian sizzling hot plate served with vegetables and chicken or beef',
+        'desc': 'Mongolian sizzling hot plate served with vegetables and chicken OR beef',
     },
     {
         'price': 39.90,
@@ -162,38 +162,45 @@ const menu_items_mains = [
     {
         'price': 25.90,
         'name': 'Canh Chua (VGO)',
-        'desc': 'Traditional Vietnamese sweet and sour pineapple, tomato and bean sprout soup with chicken or vegetables and tofu or fish (+$3) or king prawns (+$3) or seafood (+$3)',
+        'desc': 'Traditional Vietnamese sweet and sour pineapple, tomato and bean sprout soup with chicken OR vegetables and tofu OR fish (+$3) OR king prawns (+$3) OR seafood (+$3)',
     },
+];
+
+// Rice menu item objects
+const menu_items_rice  = [
     {
         'price': 22.90,
         'name': 'Com Ga Chien Gion',
-        'desc': 'Crispy marinated chicken served with jasmine rice, cucumber, pickle and vegetables in a home made dressing',
+        'desc': 'Crispy marinated chicken served with jasmine rice, cucumber, pickle and vegetables in a homemade dressing',
     },
     {
         'price': 22.90,
         'name': 'Com Suon',
-        'desc': 'Marinated pork chops served with jasmine rice, cucumber, pickle and vegetable in a home made dressing',
+        'desc': 'Marinated pork chops served with jasmine rice, cucumber, pickle and vegetable in a homemade dressing',
     },
     {
         'price': 22.90,
         'name': 'Com Heo Quay',
-        'desc': 'Mum\'s Vietnamese roast pork served with jasmine rice, cucumber, pickle and vegetables in a home made dressing',
+        'desc': 'Mum\'s Vietnamese roast pork served with jasmine rice, cucumber, pickle and vegetables in a homemade dressing',
     },
     {
         'price': 23.90,
         'name': 'Com Dac Biet',
-        'desc': 'Pork chops and roast crackling with a fried egg served with jasmine rice, cucumber, pickle and vegetables in a home made dressing',
+        'desc': 'Pork chops and roast crackling with a fried egg served with jasmine rice, cucumber, pickle and vegetables in a homemade dressing',
     },
     {
         'price': 22.90,
         'name': 'Com Chien (VGO)',
-        'desc': 'Special Vietnamese fried rice with chicken, shrimp and holy basil or vegetables and tofu',
+        'desc': 'Special Vietnamese fried rice with chicken, shrimp and holy basil OR vegetables and tofu',
     },
     {
         'price': 27.90,
         'name': 'Com Tay Cam',
-        'desc': 'Traditional Vietnamese sausage chicken mushroom rice with a fried egg',
+        'desc': 'Traditional Vietnamese rice clay pot with Chinese sausage, chicken, mushroom, a fried egg and rice',
     },
+];
+
+const menu_items_noodle = [
     {
         'price': 21.90,
         'name': 'Bun Do Chay (VGO)',
@@ -202,17 +209,17 @@ const menu_items_mains = [
     {
         'price': 21.90,
         'name': 'Bun Thit Xao',
-        'desc': 'Stir fried beef or chicken served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
+        'desc': 'Stir fried beef OR chicken served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
     },
     {
         'price': 21.90,
-        'name': 'Bun Cha Gio (VGO:CG)',
-        'desc': 'Pork or Vegetable spring rolls served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
+        'name': 'Bun Cha Gio (VGO, CG)',
+        'desc': 'Pork OR Vegetable spring rolls served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
     },
     {
         'price': 22.90,
         'name': 'Bun Nem Nuong',
-        'desc': 'Grilled pork belly meatball served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
+        'desc': 'Grilled minced pork belly meatball served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
     },
     {
         'price': 22.90,
@@ -236,17 +243,17 @@ const menu_items_salads = [
     {
         'price': 23.90,
         'name': 'Goi Tom Ga',
-        'desc': 'Prawns and chicken salad tossed in Vietnamese herbs and roasted crushed nuts',
+        'desc': 'Prawn and chicken salad tossed in Vietnamese herbs topped with roasted crushed nuts',
     },
     {
         'price': 23.90,
         'name': 'Bo Tai Chanh',
-        'desc': 'Rare beef salad tossed in Vietnamese herbs and chilli',
+        'desc': 'Rare beef salad tossed in Vietnamese herbs and chilli topped with crushed nuts',
     },
     {
         'price': 25.90,
         'name': 'Goi Do Bien',
-        'desc': 'Prawn, squid and scallop salad tossed in glass noodles and Vietnamese herbs',
+        'desc': 'Prawn, squid and scallop salad tossed in glass noodles and Vietnamese herbs topped with roasted crushed nuts',
     },
 ];
 
@@ -254,13 +261,13 @@ const menu_items_salads = [
 const menu_items_favourites = [
     {
         'price': 13.90,
-        'name': 'Baby Curry Puffs (VGO:CG)',
+        'name': 'Baby Curry Puffs (VG, CG)',
         'desc': 'Mini pie puffs with diced potatoes and carrots (3 pcs)',
     },
     {
         'price': 13.90,
         'name': 'Indonesian Chicken Satay Skewers',
-        'desc': 'Grilled seasoned chicken skewers topped with home made peanut satay sauce (3 pcs)',
+        'desc': 'Grilled seasoned chicken skewers topped with homemade peanut satay sauce (3 pcs)',
     },
     {
         'price': 13.90,
@@ -270,22 +277,22 @@ const menu_items_favourites = [
     {
         'price': 22.90,
         'name': 'Laksa (CG)',
-        'desc': 'Malaysian sweet and spicy soup with beef or chicken or vegetables and tofu or seafood (+$2)',
+        'desc': 'Malaysian sweet and spicy soup with beef OR chicken OR vegetables and tofu OR seafood (+$2)',
     },
     {
         'price': 22.90,
         'name': 'Mi Thai (VGO)',
-        'desc': 'Pad Thai noodles with beef or chicken or vegetables and tofu or seafood (+$3) or chicken and prawns (+$3)',
+        'desc': 'Pad Thai noodles with beef OR chicken OR vegetables and tofu OR seafood (+$3) OR chicken and prawns (+$3)',
     },
     {
         'price': 22.90,
         'name': 'Singapore Noodles (VGO)',
-        'desc': 'Stir fried curried rice vermicelli noodles with beef or chicken or vegetables and tofu or seafood (+$3) or chicken and prawns (+$3)',
+        'desc': 'Stir fried curried rice vermicelli noodles with beef OR chicken OR vegetables and tofu OR seafood (+$3) OR chicken and prawns (+$3)',
     },
     {
         'price': 22.90,
-        'name': 'Mi Hoanh Thanh',
-        'desc': 'Chinese wonton dumpling soup with egg noodles and bok choy',
+        'name': 'Mi Hoanh Thanh (CG)',
+        'desc': 'Chinese pork wonton dumpling soup with egg noodles and bok choy',
     },
 ];
 
@@ -294,7 +301,7 @@ const menu_items_banquet = [
     {
         'price': 65.00,
         'name': 'Tea House Selection',
-        'desc': 'Leave it to us to showcase our menu picked by our Chef (Price is PER PERSON)',
+        'desc': 'Leave it to us to showcase our menu with dishes selected for you by our Chef (Price is PER PERSON, min 2 people)',
     },
 ];
 
@@ -324,8 +331,10 @@ function menu() {
         container.appendChild(dietary_container);
     }
 
-    container.appendChild(generateMenu(menu_items_entree, "Entree"));
+    container.appendChild(generateMenu(menu_items_entree, "Khai Vi/Entree"));
     container.appendChild(generateMenu(menu_items_mains, "Mon An Chinh/Mains"));
+    container.appendChild(generateMenu(menu_items_rice, "Com Dia/Rice Dishes"));
+    container.appendChild(generateMenu(menu_items_noodle, "Bun/Noodle Salad Bowls"));
     container.appendChild(generateMenu(menu_items_salads, "Goi/Salads"));
     container.appendChild(generateMenu(menu_items_favourites, "Favourites"));
     container.appendChild(generateMenu(menu_items_banquet, "Banquet"));
@@ -337,7 +346,7 @@ function menu() {
 // Parameters: Array of menu item objects, title for menu section
 // Returns HTML for a section of menu items in rows of 3 items
 let item_id = 1;
-function generateMenu(menu_list, sub_menu) {
+function generateMenu(menu_list, sub_menu, numbered = true) {
     const container = document.createElement('div');
     const menu_section_title = document.createElement('div');
     menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2', 'pt-2');
