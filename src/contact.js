@@ -13,25 +13,18 @@ function contact() {
     contact_section_title.innerText = "Contact";
     container.appendChild(contact_section_title);
 
-    let contact = document.createElement('div');
-    contact.classList.add('text-center', 'pb-3');
-    contact.textContent = "For bookings or any other enquiries please call us on";
-    container.appendChild(contact);
+    const contact_text = ["For bookings or any other enquiries please call us on", "(08) 8294 9484", "OR", "Message us on Facebook"];
+    for(let i = 0; i < 4; i++) {
+        let contact = document.createElement('div');
+        contact.classList.add('text-center', 'pb-3');
 
-    contact = document.createElement('div');
-    contact.classList.add('text-center', 'pb-3', 'menu-sub-title');
-    contact.textContent = "(08) 8294 9484"
-    container.appendChild(contact);
+        if(i === 1) {
+            contact.classList.add('menu-sub-title');
+        }
 
-    contact = document.createElement('div');
-    contact.classList.add('text-center', 'pb-3');
-    contact.textContent = "OR"
-    container.appendChild(contact);
-
-    contact = document.createElement('div');
-    contact.classList.add('text-center', 'pb-3');
-    contact.textContent = "Message us on Facebook"
-    container.appendChild(contact);
+        contact.textContent = contact_text[i];
+        container.appendChild(contact);
+    }
 
     const social_icon = document.createElement('a');
     social_icon.classList.add('social-icon', 'text-center');
