@@ -200,6 +200,7 @@ const menu_items_rice  = [
     },
 ];
 
+// Noodle salad bowls
 const menu_items_noodle = [
     {
         'price': 21.90,
@@ -300,8 +301,91 @@ const menu_items_favourites = [
 const menu_items_banquet = [
     {
         'price': 65.00,
-        'name': 'Tea House Selection',
+        'name': 'Tea House Banquet',
         'desc': 'Leave it to us to showcase our menu with dishes selected for you by our Chef (Price is PER PERSON, min 2 people)',
+    },
+];
+
+// Dessert menu items
+const menu_items_sweets = [
+    {
+        'price': 10.90,
+        'name': 'Xoi Nep Den (VG)',
+        'desc': 'Black sticky rice pudding served warm with coconut milk and toasted peanuts',
+    },
+    {
+        'price': 10.90,
+        'name': 'Ca Rem Chien (CG)',
+        'desc': 'Fried ice-cream with toasted peanuts served with coconut milk OR caramel sauce',
+    },
+    {
+        'price': 10.90,
+        'name': 'Chuoi Chien (CG)',
+        'desc': 'Crispy banana fritter served with vanilla ice-cream and drizzled in honey',
+    },
+    {
+        'price': 5.00,
+        'name': 'Ca Rem Dua',
+        'desc': 'Coconut ice-cream topped with toasted peanuts and coconut flakes (1 scoop), (3 scoops +$5.90)',
+    },
+    {
+        'price': 5.00,
+        'name': 'Ca Rem Tra Xanh',
+        'desc': 'Refreshing green tea ice-cream topped with toasted peanuts (1 scoop), (3 scoops +$5.90)',
+    },
+    {
+        'price': 10.90,
+        'name': 'Green Tea Affogato',
+        'desc': 'Tea served with green tea ice-cream',
+    },
+    {
+        'price': 10.90,
+        'name': 'Coffee Affogato',
+        'desc': 'Espresso coffee served with vanilla ice-cream (liqueur +$5)',
+    },
+];
+
+// Extra menu items
+const menu_items_extras = [
+    {
+        'price': 5.00,
+        'name': 'Steamed Jasmine Rice / Rice Vermicelli Noodles',
+        'desc': 'Small, Medium (+$1), Large (+$2)',
+    },
+    {
+        'price': 12.00,
+        'name': 'Stir-fried Garlic Greens / Steamed Greens',
+        'desc': '',
+    },
+    {
+        'price': 5.00,
+        'name': 'Steamed Chinese Buns / Deep Fried Chinese Buns',
+        'desc': '',
+    },
+    {
+        'price': 5.00,
+        'name': 'Extra Tofu OR Vegetables OR Beef OR Chicken',
+        'desc': '',
+    },
+    {
+        'price': 2.00,
+        'name': 'Prawn',
+        'desc': 'Price is for 1 prawn',
+    },
+    {
+        'price': 0.50,
+        'name': 'Fresh Chilli',
+        'desc': '',
+    },
+    {
+        'price': 3,
+        'name': 'Peanut Satay Sauce',
+        'desc': '',
+    },
+    {
+        'price': 0.50,
+        'name': 'Take Away Containers',
+        'desc': 'Each container',
     },
 ];
 
@@ -337,7 +421,9 @@ function menu() {
     container.appendChild(generateMenu(menu_items_noodle, "Bun/Noodle Salad Bowls"));
     container.appendChild(generateMenu(menu_items_salads, "Goi/Salads"));
     container.appendChild(generateMenu(menu_items_favourites, "Favourites"));
-    container.appendChild(generateMenu(menu_items_banquet, "Banquet"));
+    container.appendChild(generateMenu(menu_items_banquet, "Banquet", false));
+    container.appendChild(generateMenu(menu_items_extras, "Them/Extras", false));
+    container.appendChild(generateMenu(menu_items_sweets, "Trang Mieng/Something Sweet", false));
     main.appendChild(container);
 }
 
@@ -370,8 +456,13 @@ function generateMenu(menu_list, sub_menu, numbered = true) {
                 if(menu === 'price') {
                     menu_element.innerText = "$" + menu_list[count][menu];
                 } else if(menu === "name") {
-                    menu_element.innerText = "#" + item_id + " " + menu_list[count][menu];
-                    item_id++;
+                    if(numbered) {
+                        menu_element.innerText = "#" + item_id + " " + menu_list[count][menu];
+                        item_id++;
+                    } else {
+                        menu_element.innerText = menu_list[count][menu];
+                    }
+                    
                 } else {
                     menu_element.innerText = menu_list[count][menu];
                 }

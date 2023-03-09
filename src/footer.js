@@ -84,7 +84,7 @@ function footer() {
     // Developer Credit
     const developed_by = document.createElement('p');
     developed_by.classList.add('text-center');
-    developed_by.innerText = "Developed by Andy Phan ";
+    developed_by.innerText = "Developed by Andy ";
     const github = document.createElement('a');
     github.target = "_blank";
     github.href = github_link;
