@@ -9,18 +9,18 @@
     --contrast: #5DAA68;
 }
 
-@media only screen and (max-device-width: 480px) {
-    html {
-      height: calc(100% + 60px);
-      min-height: calc(100% + 60px);
-    }
-}
-
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 100vh;
+}
+
+@media only screen and (max-device-width: 480px) {
+    html {
+      height: calc(100% + 60px);
+      min-height: calc(100% + 60px);
+    }
 }
 
 *, *:before, *:after {
