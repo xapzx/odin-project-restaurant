@@ -3,17 +3,17 @@ const menu_items_entree = [
     {
         'price': 11.90, 
         'name': 'Cha Gio Ha Noi', 
-        'desc': 'Mum\'s special Northern style seafood spring rolls (4pcs)',
+        'desc': 'Mum\'s special Northern style seafood spring rolls (4 pcs)',
     },
     {
         'price': 10.90,
         'name': 'Cha Gio Rau (VG:CG)',
-        'desc': 'Vegetarian spring rolls (3pcs)',
+        'desc': 'Vegetarian spring rolls (3 pcs)',
     },
     {
         'price': 10.90,
         'name': 'Cha Gio Saigon',
-        'desc': 'Southern style pork spring rolls (3pcs)',
+        'desc': 'Southern style pork spring rolls (3 pcs)',
     },
     {
         'price': 10.90,
@@ -43,7 +43,7 @@ const menu_items_entree = [
     {
         'price': 13.90,
         'name': 'Canh Ga',
-        'desc': 'Sticky chicken wings (2pcs)',
+        'desc': 'Sticky chicken wings (2 pcs)',
     },
     {
         'price': 13.90,
@@ -68,12 +68,12 @@ const menu_items_entree = [
     {
         'price': 13.90,
         'name': 'Baby Curry Puffs (VG:CG)',
-        'desc': 'Mini pie puffs with diced potatoes and carrots (3pcs)',
+        'desc': 'Mini pie puffs with diced potatoes and carrots (3 pcs)',
     },
     {
         'price': 13.90,
         'name': 'Indonesian Chicken Satay',
-        'desc': 'Grilled seasoned chicken satay skewers topped with home made satay sauce (3pcs)',
+        'desc': 'Grilled seasoned chicken satay skewers topped with home made satay sauce (3 pcs)',
     },
     {
         'price': 13.90,
@@ -255,12 +255,12 @@ const menu_items_favourites = [
     {
         'price': 13.90,
         'name': 'Baby Curry Puffs (VGO:CG)',
-        'desc': 'Mini pie puffs with diced potatoes and carrots (3pcs)',
+        'desc': 'Mini pie puffs with diced potatoes and carrots (3 pcs)',
     },
     {
         'price': 13.90,
         'name': 'Indonesian Chicken Satay Skewers',
-        'desc': 'Grilled seasoned chicken skewers topped with home made peanut satay sauce (3pcs)',
+        'desc': 'Grilled seasoned chicken skewers topped with home made peanut satay sauce (3 pcs)',
     },
     {
         'price': 13.90,
@@ -300,6 +300,7 @@ const menu_items_banquet = [
 
 const menu_items_html = ['span', 'div', 'div'];
 const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc'];
+const diet = ["CG - Contains Gluten", "VGO - Vegan Option Available on Request", "VG - Vegan"];
 
 // Append generated HTML for all menu items with sub-titles to the main section
 function menu() {
@@ -312,6 +313,16 @@ function menu() {
     menu_section_title.classList.add('text-center', 'menu-title');
     menu_section_title.innerText = "Menu";
     container.appendChild(menu_section_title);
+
+    const dietary_container = document.createElement('div');
+    dietary_container.classList.add('text-center', 'pb-3');
+    
+    for(const item of diet) {
+        let dietary = document.createElement('div');
+        dietary.innerText = item;
+        dietary_container.appendChild(dietary);
+        container.appendChild(dietary_container);
+    }
 
     container.appendChild(generateMenu(menu_items_entree, "Entree"));
     container.appendChild(generateMenu(menu_items_mains, "Mon An Chinh/Mains"));
@@ -329,7 +340,7 @@ let item_id = 1;
 function generateMenu(menu_list, sub_menu) {
     const container = document.createElement('div');
     const menu_section_title = document.createElement('div');
-    menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2');
+    menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2', 'pt-2');
     menu_section_title.innerText = sub_menu;
     container.appendChild(menu_section_title);
 
