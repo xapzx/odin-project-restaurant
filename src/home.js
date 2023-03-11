@@ -2,12 +2,6 @@ import gth_icon from './images/gth.jpeg';
 import footer from './footer.js'
 import menu from './menu.js'
 import contact from './contact.js'
-import bbh from './images/bbh.jpg'
-import chicken from './images/chicken.jpg'
-import coldrolls from './images/coldrolls.jpg'
-import rice from './images/friedrice.jpg'
-import laksa from './images/laksa.jpg'
-import padthai from './images/padthai.jpg'
 
 // Create Home page
 // Appends the Navbar and Main section to the HTML file
@@ -15,9 +9,8 @@ function home() {
     const content = document.querySelector('#content');
     content.appendChild(navbar());
     content.appendChild(main());
-    content.appendChild(information());
-    content.appendChild(gallery());
- }
+    content.appendChild(info());
+}
 
 // Create nav bar
 // Returns JS generated Navbar HTML
@@ -31,8 +24,6 @@ function navbar() {
     const logo = document.createElement('img');
     logo.classList.add('navbar-brand');
     logo.src = gth_icon;
-    // logo.href = '#';
-    // logo.innerText = "GREEN TEA HOUSE";
 
     const btn = document.createElement('button');
     btn.classList.add('navbar-toggler', 'navbar-dark');
@@ -88,39 +79,18 @@ function navItem(items) {
                 home();
                 footer();
             });
-        } else if(item === "MENU") {
-            nav_link.addEventListener('click', () => {
-                if(nav_link.classList.contains('active')) {
-                    return;
-                }
-
-                if(document.querySelector('.desc-container') !== null) {
-                    document.querySelector('.desc-container').remove();
-                }
-
-                if(document.querySelector('.gallery') !== null) {
-                    document.querySelector('.gallery').remove();
-                }
-                
-                document.querySelector('main').textContent = '';
-                menu();
-            });
         } else {
             nav_link.addEventListener('click', () => {
                 if(nav_link.classList.contains('active')) {
                     return;
                 }
 
-                if(document.querySelector('.desc-container') !== null) {
-                    document.querySelector('.desc-container').remove();
+                hideMain(nav_link);
+                if(item === "MENU") {
+                    menu();
+                } else {
+                    contact();
                 }
-
-                if(document.querySelector('.gallery') !== null) {
-                    document.querySelector('.gallery').remove();
-                }
-
-                document.querySelector('main').textContent = '';
-                contact();
             });
         }
 
@@ -130,10 +100,17 @@ function navItem(items) {
 
         nav_item.appendChild(nav_link);
         ul.appendChild(nav_item);
-
         first = 0;
     }
     return ul;
+}
+
+// Hides the main information section when clicking on 'menu' or 'contact'
+function hideMain(nav_link) {
+    if(document.querySelector('.main-info') !== null) {
+        document.querySelector('.main-info').remove();
+    }
+    document.querySelector('main').textContent = '';
 }
 
 // Add 'active' class to given element and remove from the rest
@@ -178,7 +155,7 @@ function information() {
     return container;
 }
 
-// const gallery_img = [bbh, chicken, rice, coldrolls, laksa, padthai];
+// Generate photo section
 function gallery() {
     const container = document.createElement('div');
     container.classList.add('gallery', 'text-center');
@@ -195,6 +172,16 @@ function gallery() {
     }
 
     return container;
+}
+
+// Generate Home page info section
+function info() {
+    const info = document.createElement('div');
+    info.className = "main-info";
+    info.appendChild(information());
+    info.appendChild(gallery());
+    
+    return info;
 }
 
 export default home;
