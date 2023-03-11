@@ -106,15 +106,43 @@ main .social-icon > img{
 .gallery {
     background-color: var(--background);
     opacity: 0.9;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(300px, 20vw, 30vw));
+    justify-content: center;
+    padding-bottom: 24px;
 }
 
-.gallery img {
-    width: 250px;
-    height: 250px;
+.dish-img {
+    height: clamp(300px, 20vw, 30vw);
+    width: clamp(300px, 20vw, 30vw);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.gallery > .row {
-    width: 100%;
+// Gallery images
+.img-1 {
+    background-image: url(images/bbh.jpg);
+}
+
+.img-2 {
+    background-image: url(images/coldrolls.jpg);
+}
+
+.img-3 {
+    background-image: url(images/friedrice.jpg);
+}
+
+.img-4 {
+    background-image: url(images/chicken.jpg);
+}
+
+.img-5 {
+    background-image: url(images/laksa.jpg);
+}
+
+.img-6 {
+    background-image: url(images/padthai.jpg);
 }
 
 // Menu

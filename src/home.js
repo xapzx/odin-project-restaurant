@@ -178,31 +178,22 @@ function information() {
     return container;
 }
 
-const gallery_img = [bbh, chicken, coldrolls, rice, laksa, padthai];
+// const gallery_img = [bbh, chicken, rice, coldrolls, laksa, padthai];
 function gallery() {
     const container = document.createElement('div');
     container.classList.add('gallery', 'text-center');
 
     // const gallery_title = document.createElement('div');
     // gallery_title.classList.add("about-title", 'pb-4');
-    // // gallery_title.textContent = "Photos";
+    // gallery_title.textContent = "Photos"; 
     // container.appendChild(gallery_title);
 
-    const row = document.createElement('div');
-    row.className = 'row';
-
-    const col = document.createElement('div');
-    col.className = 'col';
-
-    for(const image of gallery_img) {
-        let img = new Image();
-        img.src = image;
-        img.alt = "Image of restaurant dishes";
-        col.appendChild(img);
-        row.appendChild(col);
+    for(let img_id = 1; img_id < 7; img_id++) {
+        const img = document.createElement('div');
+        img.classList.add('dish-img', 'img-' + img_id);
+        container.appendChild(img)
     }
 
-    container.appendChild(row);
     return container;
 }
 
