@@ -35,7 +35,11 @@ function navbar() {
     btn.setAttribute("aria-label", "Toggle navigation");
 
     const burger = document.createElement('span');
-    burger.classList.add('navbar-toggler-icon');
+    burger.classList.add('navbar-toggler-icon-custom');
+
+    btn.addEventListener('click', () => {
+        burger.classList.toggle('navbar-toggler-icon-custom-close');        
+    });
     btn.appendChild(burger);
 
     const navbar = document.createElement('div');

@@ -45,13 +45,14 @@ body {
 }
 
 // Nav-bar
-#navbarNav ul li{
-    position: relative;
+#navbarNav ul li {
+    // position: relative;
+    font-weight: bold;
 }
 
-#navbarNav ul{
-    position: absolute;
-}
+// #navbarNav ul{
+//     position: absolute;
+// }
 
 .navbar-brand {
     max-width: 150px;
@@ -66,6 +67,21 @@ a.navbar-brand, .nav-item > a {
     cursor: pointer;
 }
 
+.navbar-toggler-icon-custom {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(images/hamburger-menu.png);
+}
+
+.navbar-toggler-icon-custom-close {
+    background-image: url(images/close.svg);
+}
+
 main {
     min-height: 100vh;
     padding: 24px;
@@ -74,12 +90,8 @@ main {
 main .social-icon {
     justify-content: center;
     width: 75px;
-    margin: auto;
-}
-
-main .social-icon > img {
     height: 75px;
-    width: 75px;
+    margin: auto;
 }
 
 .headline {
@@ -169,7 +181,7 @@ main .social-icon > img {
 .menu {
     background-color: var(--background);
     opacity: 0.9;
-    // min-height: 100vh;
+    min-height: 100vh;
     width: 70vw;
 }
 
