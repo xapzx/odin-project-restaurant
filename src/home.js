@@ -79,6 +79,10 @@ function navItem(items) {
 
         if(item === "HOME") {
             nav_link.addEventListener('click', () => {
+                if(nav_link.classList.contains('active')) {
+                    return;
+                }
+
                 content.textContent = '';
                 home();
                 footer();
@@ -100,6 +104,11 @@ function navItem(items) {
 
         nav_link.addEventListener("click", (e) => {
             activateButton(nav_link);
+            document.querySelector('#navbarNav').classList.toggle('show');
+            const toggler = document.querySelector('.navbar-toggler-icon-custom');
+            if(toggler.classList.contains('navbar-toggler-icon-custom-close')) {
+                toggler.classList.remove('navbar-toggler-icon-custom-close');
+            }
         });
 
         nav_item.appendChild(nav_link);
