@@ -152,7 +152,7 @@ main .social-icon > img {
 
 // Menu
 .menu {
-    font-size: var(--text-font);
+    font-size: var(--text-font-size);
 }
 
 .menu-title {
@@ -185,7 +185,7 @@ main .social-icon > img {
 
 // Footer Styling
 footer {
-    background-color: var(--contrast);
+    background-color: var(--font-color);
     color: var(--background);
 }
 
