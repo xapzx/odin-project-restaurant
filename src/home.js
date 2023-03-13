@@ -165,7 +165,7 @@ function gallery() {
     // gallery_title.textContent = "Photos"; 
     // container.appendChild(gallery_title);
 
-    for(let img_id = 1; img_id < 7; img_id++) {
+    for(let img_id = 0; img_id < 6; img_id++) {
         const img = document.createElement('div');
         img.classList.add('dish-img', 'img-' + img_id);
         container.appendChild(img)
