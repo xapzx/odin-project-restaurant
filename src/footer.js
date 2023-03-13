@@ -1,5 +1,6 @@
 import github_icon from './images/github.svg';
 import facebook_icon from './images/facebook.svg';
+import createSocialIcon from './helper.js';
 
 // Append JS generated footer to the #content section
 function footer() {
@@ -21,14 +22,7 @@ function footer() {
     social.classList.add('row', 'social');
     const social_title = document.createElement('h6');
     social_title.innerText = 'Social:';
-    const social_icon = document.createElement('a');
-    social_icon.classList.add('social-icon');
-    social_icon.href = facebook_link;
-    social_icon.target = "_blank";
-    const social_img = new Image();
-    social_img.src = facebook_icon;
-    social_img.alt = "Facebook Icon";
-    social_icon.appendChild(social_img);
+    const social_icon = createSocialIcon(facebook_icon, facebook_link, "Facebook Icon", ['social-icon']);
     social.appendChild(social_title);
     social.appendChild(social_icon);
     col.appendChild(social);
@@ -85,13 +79,7 @@ function footer() {
     const developed_by = document.createElement('p');
     developed_by.classList.add('text-center');
     developed_by.innerText = "Developed by Andy ";
-    const github = document.createElement('a');
-    github.target = "_blank";
-    github.href = github_link;
-    const img = new Image();
-    img.src = github_icon;
-    img.alt = "Github Icon";
-    github.appendChild(img);
+    const github = createSocialIcon(github_icon, github_link, "Github Icon");
     developed_by.appendChild(github);
 
     container.appendChild(row);

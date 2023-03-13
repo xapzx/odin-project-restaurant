@@ -1,4 +1,5 @@
 import facebook_icon from './images/facebook.svg';
+import createSocialIcon from './helper.js';
 
 // Append generated HTML for all menu items with sub-titles to the main section
 function contact() {
@@ -26,16 +27,8 @@ function contact() {
         container.appendChild(contact);
     }
 
-    const social_icon = document.createElement('a');
-    social_icon.classList.add('social-icon', 'text-center');
-    social_icon.href = facebook_link;
-    social_icon.target = "_blank";
-    const social_img = new Image();
-    social_img.src = facebook_icon;
-    social_img.alt = "Facebook Icon";
-    social_icon.appendChild(social_img);
+    const social_icon = createSocialIcon(facebook_icon, facebook_link, "Facebook Icon", ['social-icon', 'text-center']);
     container.appendChild(social_icon);
-    
     main.appendChild(container);
 }
 
