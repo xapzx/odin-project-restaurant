@@ -392,6 +392,17 @@ const menu_items_extras = [
 const menu_items_html = ['span', 'div', 'div'];
 const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc'];
 const diet = ["CG - Contains Gluten", "VGO - Vegan Option Available on Request", "VG - Vegan"];
+const menu_items = [
+    { title: "Khai Vi/Entree", items: menu_items_entree, setNum: true },
+    { title: "Mon An Chinh/Mains", items: menu_items_mains, setNum: true },
+    { title: "Com Dia/Rice Dishes", items: menu_items_rice, setNum: true },
+    { title: "Bun/Noodle Salad Bowls", items: menu_items_noodle, setNum: true },
+    { title: "Goi/Salads", items: menu_items_salads, setNum: true },
+    { title: "Favourites", items: menu_items_favourites, setNum: true },
+    { title: "Banquet", items: menu_items_banquet, setNum: false },
+    { title: "Them/Extras", items: menu_items_extras, setNum: false },
+    { title: "Trang Mieng/Something Sweet", items: menu_items_sweets, setNum: false },
+];
 
 // Append generated HTML for all menu items with sub-titles to the main section
 function menu() {
@@ -415,15 +426,10 @@ function menu() {
         container.appendChild(dietary_container);
     }
 
-    container.appendChild(generateMenu(menu_items_entree, "Khai Vi/Entree"));
-    container.appendChild(generateMenu(menu_items_mains, "Mon An Chinh/Mains"));
-    container.appendChild(generateMenu(menu_items_rice, "Com Dia/Rice Dishes"));
-    container.appendChild(generateMenu(menu_items_noodle, "Bun/Noodle Salad Bowls"));
-    container.appendChild(generateMenu(menu_items_salads, "Goi/Salads"));
-    container.appendChild(generateMenu(menu_items_favourites, "Favourites"));
-    container.appendChild(generateMenu(menu_items_banquet, "Banquet", false));
-    container.appendChild(generateMenu(menu_items_extras, "Them/Extras", false));
-    container.appendChild(generateMenu(menu_items_sweets, "Trang Mieng/Something Sweet", false));
+    for(const item of menu_items) {
+        container.appendChild(generateMenu(item.items, item.title, item.setNum));
+    }
+    
     main.appendChild(container);
 }
 
