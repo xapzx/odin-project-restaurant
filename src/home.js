@@ -130,10 +130,10 @@ function hideMain(nav_link) {
 // Parameter: Element to add 'active' class (One of the navbar items)
 function activateButton(button) {
     const buttons = document.querySelectorAll(".nav-link");
-  
-    buttons.forEach((button) => {
-        if (button !== this) {
-            button.classList.remove("active");
+
+    buttons.forEach((current_button) => {
+        if (current_button.id !== button.id) {
+            current_button.classList.remove("active");
         }
     });
   
