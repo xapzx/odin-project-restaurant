@@ -4,11 +4,11 @@
 // @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --background: #FAF1CF;
-    --font-color: #3F6844;
-    --contrast: #5DAA68;
+    --primary-color: #FAF1CF;
+    --secondary-color: #3F6844;
+    --contrast-color: #5DAA68;
     --img-size: clamp(300px, 15vw, 20vw);
-    --sub-title: clamp(1.3rem, 3vw, 2rem);
+    --sub-title-font-size: clamp(1.3rem, 3vw, 2rem);
     --text-font-size: clamp(1rem, 2vw, 1.2rem);
     --headline-font-size: clamp(2rem, 2.2vw, 2.5rem);
 }
@@ -41,10 +41,15 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    color: var(--font-color);
+    color: var(--secondary-color);
 }
 
 // Nav-bar
+.navbar {
+    background-color: var(--secondary-color);
+    opacity: 0.9;
+}
+
 #navbarNav ul li {
     // position: relative;
     font-weight: bold;
@@ -60,7 +65,7 @@ body {
 }
 
 a.navbar-brand, .nav-item > a {
-    color: var(--background);
+    color: var(--primary-color);
 }
 
 .nav-item {
@@ -96,7 +101,7 @@ main .social-icon {
 
 .headline {
     padding-top: 25vh;
-    color: var(--background);
+    color: var(--primary-color);
     font-weight: bold;
     font-size: var(--headline-font-size);
     text-align: center;
@@ -104,7 +109,7 @@ main .social-icon {
 
 // Description Section
 .desc-container {
-    background-color: var(--background);
+    background-color: var(--primary-color);
     opacity: 0.9;
     padding: 24px 0;
     text-align: center;
@@ -115,13 +120,13 @@ main .social-icon {
 }
 
 .about-title {
-    font-size: var(--sub-title);
+    font-size: var(--sub-title-font-size);
     font-weight: bold;
 }
 
 // Gallery section
 .gallery {
-    background-color: var(--background);
+    background-color: var(--primary-color);
     opacity: 0.9;
     display: grid;
     grid-template-columns: repeat(auto-fit, var(--img-size));
@@ -174,14 +179,13 @@ main .social-icon {
 }
 
 .menu-sub-title {
-    font-size: var(--sub-title);
+    font-size: var(--sub-title-font-size);
     font-weight: 500;
 }
 
 .menu {
-    background-color: var(--background);
+    background-color: var(--primary-color);
     opacity: 0.9;
-    min-height: 100vh;
     width: 70vw;
 }
 
@@ -197,8 +201,8 @@ main .social-icon {
 
 // Footer Styling
 footer {
-    background-color: var(--font-color);
-    color: var(--background);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .footer-info {
