@@ -7,7 +7,7 @@ function contact() {
 
     const main = document.querySelector('main');
     const container = document.createElement('div');
-    container.classList.add('menu', 'container', 'p-5');
+    container.classList.add('menu', 'container', 'p-4');
     
     const contact_section_title = document.createElement('div');
     contact_section_title.classList.add('text-center', 'menu-title', 'pb-3');
@@ -15,7 +15,7 @@ function contact() {
     container.appendChild(contact_section_title);
 
     const contact_text = ["For bookings or any other enquiries please call us on", "(08) 8294 9484", "OR", "Message us on Facebook"];
-    for(let i = 0; i < 4; i++) {
+    for(let i = 0; i < contact_text.length; i++) {
         let contact = document.createElement('div');
         contact.classList.add('text-center', 'pb-3');
 
