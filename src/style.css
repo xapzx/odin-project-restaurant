@@ -1,7 +1,7 @@
-// Import all of Bootstrap's CSS
+/* Import all of Bootstrap's CSS */
 @import "~bootstrap/scss/bootstrap";
 
-// @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap'); */
 
 :root {
     --primary-color: #FAF1CF;
@@ -44,20 +44,20 @@ body {
     color: var(--secondary-color);
 }
 
-// Nav-bar
+/* Nav-bar */
 .navbar {
     background-color: var(--secondary-color);
     opacity: 0.9;
 }
 
 #navbarNav ul li {
-    // position: relative;
+    /* position: relative; */
     font-weight: bold;
 }
 
-// #navbarNav ul{
-//     position: absolute;
-// }
+/* #navbarNav ul{ */
+    /* position: absolute; */
+/* } */
 
 .navbar-brand {
     max-width: 150px;
@@ -107,7 +107,7 @@ main .social-icon {
     text-align: center;
 }
 
-// Description Section
+/* Description Section */
 .desc-container {
     background-color: var(--primary-color);
     opacity: 0.9;
@@ -124,7 +124,7 @@ main .social-icon {
     font-weight: bold;
 }
 
-// Gallery section
+/* Gallery section */
 .gallery {
     background-color: var(--primary-color);
     opacity: 0.9;
@@ -142,7 +142,7 @@ main .social-icon {
     background-repeat: no-repeat;
 }
 
-// Gallery images
+/* Gallery images */
 .img-0 {
     background-image: url(images/bbh.jpg);
 }
@@ -167,7 +167,7 @@ main .social-icon {
     background-image: url(images/laksa.jpg);
 }
 
-// Menu
+/* Menu */
 .menu {
     font-size: var(--text-font-size);
 }
@@ -199,7 +199,7 @@ main .social-icon {
     font-weight: bold;
 }
 
-// Footer Styling
+/* Footer Styling */
 footer {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -227,7 +227,7 @@ footer {
         min-height: calc(100% + 60px);
     }
 
-    // Headline positioning for smaller screens
+    /* Headline positioning for smaller screens */
     .headline {
         padding-top: 15vh;
     }

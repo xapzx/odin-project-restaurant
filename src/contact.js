@@ -14,7 +14,12 @@ function contact() {
     contact_section_title.innerText = "Contact";
     container.appendChild(contact_section_title);
 
-    const contact_text = ["For bookings or any other enquiries please call us on", "(08) 8294 9484", "OR", "Message us on Facebook"];
+    const contact_text = [
+        "For bookings or any other enquiries please call us on", 
+        "(08) 8294 9484", 
+        "OR", 
+        "Message us on Facebook"
+    ];
     for(let i = 0; i < contact_text.length; i++) {
         let contact = document.createElement('div');
         contact.classList.add('text-center', 'pb-3');
