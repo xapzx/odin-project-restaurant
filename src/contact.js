@@ -32,7 +32,7 @@ function contact() {
         container.appendChild(contact);
     }
 
-    const social_icon = createSocialIcon(facebook_icon, facebook_link, "Facebook Icon", ['social-icon', 'text-center']);
+    const social_icon = createSocialIcon(facebook_icon, facebook_link, "Facebook Icon", ['social-icon', 'text-center', 'd-flex', 'm-auto', 'justify-content-center']);
     container.appendChild(social_icon);
     main.appendChild(container);
 }

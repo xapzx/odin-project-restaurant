@@ -1,8 +1,6 @@
 /* Import all of Bootstrap's CSS */
 @import "~bootstrap/scss/bootstrap";
 
-/* @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap'); */
-
 :root {
     --primary-color: #FAF1CF;
     --secondary-color: #3F6844;
@@ -28,7 +26,6 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: 'Shantell Sans', cursive, sans-serif;
 }
 
@@ -50,10 +47,10 @@ body {
     opacity: 0.9;
 }
 
-#navbarNav ul li {
-    /* position: relative; */
+/* #navbarNav ul li {
+    position: relative;
     font-weight: bold;
-}
+} */
 
 /* #navbarNav ul{ */
     /* position: absolute; */
@@ -73,7 +70,6 @@ a.navbar-brand, .nav-item > a {
 }
 
 .navbar-toggler-icon-custom {
-    display: inline-block;
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
@@ -83,45 +79,27 @@ a.navbar-brand, .nav-item > a {
     background-image: url(images/hamburger-menu.png);
 }
 
-.navbar-toggler-icon-custom-close {
-    background-image: url(images/close.svg);
-}
-
-main {
-    min-height: 100vh;
-    padding: 24px;
-}
+.navbar-toggler-icon-custom-close { background-image: url(images/close.svg); }
 
 main .social-icon {
-    justify-content: center;
     width: 75px;
     height: 75px;
-    margin: auto;
 }
 
 .headline {
     padding-top: 25vh;
     color: var(--primary-color);
-    font-weight: bold;
     font-size: var(--headline-font-size);
-    text-align: center;
 }
 
 /* Description Section */
 .desc-container {
     background-color: var(--primary-color);
     opacity: 0.9;
-    padding: 24px 0;
-    text-align: center;
-}
-
-.desc {
-    padding: 18px;
 }
 
 .about-title {
     font-size: var(--sub-title-font-size);
-    font-weight: bold;
 }
 
 /* Gallery section */
@@ -131,7 +109,6 @@ main .social-icon {
     display: grid;
     grid-template-columns: repeat(auto-fit, var(--img-size));
     justify-content: center;
-    padding-bottom: 24px;
 }
 
 .dish-img {
@@ -143,29 +120,12 @@ main .social-icon {
 }
 
 /* Gallery images */
-.img-0 {
-    background-image: url(images/bbh.jpg);
-}
-
-.img-1 {
-    background-image: url(images/padthai.jpg);
-}
-
-.img-2 {
-    background-image: url(images/coldrolls.jpg);
-}
-
-.img-3 {
-    background-image: url(images/friedrice.jpg);
-}
-
-.img-4 {
-    background-image: url(images/chicken.jpg);
-}
-
-.img-5 {
-    background-image: url(images/laksa.jpg);
-}
+.img-0 { background-image: url(images/bbh.jpg); }
+.img-1 { background-image: url(images/padthai.jpg); }
+.img-2 { background-image: url(images/coldrolls.jpg); }
+.img-3 { background-image: url(images/friedrice.jpg); }
+.img-4 { background-image: url(images/chicken.jpg); }
+.img-5 { background-image: url(images/laksa.jpg); }
 
 /* Menu */
 .menu {
@@ -173,14 +133,11 @@ main .social-icon {
 }
 
 .menu-title {
-    text-align: center;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
-    font-weight: bold;
 }
 
 .menu-sub-title {
     font-size: var(--sub-title-font-size);
-    font-weight: 500;
 }
 
 .menu {
@@ -189,36 +146,14 @@ main .social-icon {
     width: 70vw;
 }
 
-.menu-item-name {
-    font-weight: bold;
-}
-
-.menu-item-price {
-    float: right;
-    padding-left: 8px;
-    font-weight: bold;
-}
-
 /* Footer Styling */
 footer {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
-.footer-info {
-    padding: 36px 18px;
-}
-
 .footer-info p {
     margin: 0;
-}
-
-.social {
-    margin-bottom: 12px;
-}
-
-.social-icon {
-    display: flex;
 }
 
 @media only screen and (max-device-width: 480px) {

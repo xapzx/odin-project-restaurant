@@ -412,7 +412,7 @@ function menu() {
     container.classList.add('menu', 'container', 'p-3');
     
     const menu_section_title = document.createElement('div');
-    menu_section_title.classList.add('text-center', 'menu-title');
+    menu_section_title.classList.add('text-center', 'menu-title', 'fw-bold');
     menu_section_title.innerText = "Menu";
     container.appendChild(menu_section_title);
 
@@ -441,7 +441,7 @@ let item_id = 1;
 function generateMenu(menu_list, sub_menu, numbered = true) {
     const container = document.createElement('div');
     const menu_section_title = document.createElement('div');
-    menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2', 'pt-2');
+    menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2', 'pt-2', 'fw-bold');
     menu_section_title.innerText = sub_menu;
     container.appendChild(menu_section_title);
 
@@ -461,7 +461,9 @@ function generateMenu(menu_list, sub_menu, numbered = true) {
 
                 if(menu === 'price') {
                     menu_element.innerText = "$" + menu_list[count][menu];
+                    menu_element.classList.add('fw-bold', 'ps-2', 'float-end');
                 } else if(menu === "name") {
+                    menu_element.classList.add('fw-bold');
                     if(numbered) {
                         menu_element.innerText = "#" + item_id + " " + menu_list[count][menu];
                         item_id++;
