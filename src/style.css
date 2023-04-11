@@ -92,10 +92,26 @@ main .social-icon {
     font-size: var(--headline-font-size);
 }
 
+@media only screen and (max-device-width: 480px) {
+    html {
+        height: calc(100% + 60px);
+        min-height: calc(100% + 60px);
+    }
+
+    /* Headline positioning for smaller screens */
+    .headline {
+        padding-top: 15vh;
+    }
+}
+
 /* Description Section */
 .desc-container {
     background-color: var(--primary-color);
     opacity: 0.9;
+}
+
+.desc {
+    max-width: 75ch;
 }
 
 .about-title {
@@ -106,9 +122,9 @@ main .social-icon {
 .gallery {
     background-color: var(--primary-color);
     opacity: 0.9;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, var(--img-size));
-    justify-content: center;
+    justify-content: center; */
 }
 
 .dish-img {
@@ -156,14 +172,6 @@ footer {
     margin: 0;
 }
 
-@media only screen and (max-device-width: 480px) {
-    html {
-        height: calc(100% + 60px);
-        min-height: calc(100% + 60px);
-    }
-
-    /* Headline positioning for smaller screens */
-    .headline {
-        padding-top: 15vh;
-    }
+.map-responsive, .map-responsive iframe{
+    width: min(1000px, 100%);
 }
