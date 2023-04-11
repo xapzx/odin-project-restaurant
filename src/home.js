@@ -25,7 +25,7 @@ menuItems.forEach(item => {
             mainElement.textContent = '';
             const headline = document.createElement('div');
             headline.textContent = "Experience Authentic Vietnamese Cuisine at Green Tea House!";
-            headline.classList.add('container', 'headline');
+            headline.classList.add('container', 'headline', 'text-center', 'fw-bold');
             mainElement.appendChild(headline);
             infoContainer.style.display = "block";
         });
