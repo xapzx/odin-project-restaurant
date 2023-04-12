@@ -63,7 +63,8 @@ const menu_items_entree = [
     {
         'price': 11.90,
         'name': 'Muc Rang Muoi (VGO, CG)',
-        'desc': 'Small salt and pepper squid OR tofu (Large +$6)',
+        'desc': 'Small salt and pepper squid OR',
+        'alt': ['Tofu', '(Large +$6)'],
     },
     // {
     //     'price': 13.90,
@@ -87,7 +88,8 @@ const menu_items_mains = [
     {
         'price': 22.90,
         'name': 'Pho Ha Noi',
-        'desc': 'Traditional Vietnamese beef rice noodle soup with sliced rare beef, brisket and meatballs OR chicken breast OR vegetable and tofu',
+        'desc': 'Traditional Vietnamese beef rice noodle soup with:',
+        'alt': ['Sliced Rare Beef, Brisket and Meatballs OR', 'Chicken Breast OR', 'Vegetable and Tofu'],
     },
     {
         'price': 22.90,
@@ -107,17 +109,20 @@ const menu_items_mains = [
     {
         'price': 22.90,
         'name': 'Hu Tieu Xao (VGO)',
-        'desc': 'Fresh flat rice noodles stir fried with vegetables and chicken OR vegetables and tofu OR seafood (+$3)',
+        'desc': 'Fresh flat rice noodles stir fried with:',
+        'alt': ['Vegetables and Chicken OR', 'Vegetables and Tofu OR', 'Seafood (+$3)'],
     },
     {
         'price': 22.90,
         'name': 'Xao Xa Ot (VGO)',
-        'desc': 'Lemongrass chilli stir fried with vegetables and tofu OR chicken OR beef OR seafood (+$3)',
+        'desc': 'Lemongrass chilli stir fried with vegetables and:',
+        'alt': ['Tofu OR', 'Chicken OR', 'Beef OR', 'Seafood (+$3)'],
     },
     {
         'price': 22.90,
         'name': 'Xao Hat Dieu',
-        'desc': 'Roasted cashews stired fried with vegetables and tofu OR chicken OR beef OR seafood (+$3)',
+        'desc': 'Roasted cashews stired fried with vegetables and:',
+        'alt': ['Tofu OR', 'Chicken OR', 'Beef OR', 'Seafood (+$3)'],
     },
     {
         'price': 23.90,
@@ -147,7 +152,8 @@ const menu_items_mains = [
     {
         'price': 24.90,
         'name': 'Dia Nong',
-        'desc': 'Mongolian sizzling hot plate served with vegetables and chicken OR beef',
+        'desc': 'Mongolian sizzling hot plate served with vegetables and:',
+        'alt': ['Chicken OR', 'Beef'],
     },
     {
         'price': 39.90,
@@ -162,7 +168,8 @@ const menu_items_mains = [
     {
         'price': 25.90,
         'name': 'Canh Chua (VGO)',
-        'desc': 'Traditional Vietnamese sweet and sour pineapple, tomato and bean sprout soup with chicken OR vegetables and tofu OR fish (+$3) OR king prawns (+$3) OR seafood (+$3)',
+        'desc': 'Traditional Vietnamese sweet and sour pineapple, tomato and bean sprout soup with:',
+        'alt': ['Chicken OR', 'Vegetables and Tofu OR', 'Fish (+$3) OR', 'King Prawns (+$3) OR', 'Seafood (+$3)'],
     },
 ];
 
@@ -191,7 +198,8 @@ const menu_items_rice  = [
     {
         'price': 22.90,
         'name': 'Com Chien (VGO)',
-        'desc': 'Special Vietnamese fried rice with chicken, shrimp and holy basil OR vegetables and tofu',
+        'desc': 'Special Vietnamese fried rice with:',
+        'alt': ['Chicken, Shrimp and Holy Basil OR', 'Vegetables and Tofu']
     },
     {
         'price': 27.90,
@@ -210,12 +218,14 @@ const menu_items_noodle = [
     {
         'price': 21.90,
         'name': 'Bun Thit Xao',
-        'desc': 'Stir fried beef OR chicken served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
+        'desc': 'Vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing served with stir fried:',
+        'alt': ['Beef OR', 'Chicken'],
     },
     {
         'price': 21.90,
         'name': 'Bun Cha Gio (VGO, CG)',
-        'desc': 'Pork OR Vegetable spring rolls served with vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing',
+        'desc': 'Vermicelli noodles, mint, cucumber, salad, crushed roasted peanuts and a home made dressing served with:',
+        'alt': ['Pork spring rolls OR', 'Vegetable spring rolls'],
     },
     {
         'price': 22.90,
@@ -278,17 +288,20 @@ const menu_items_favourites = [
     {
         'price': 22.90,
         'name': 'Laksa (CG)',
-        'desc': 'Malaysian sweet and spicy soup with beef OR chicken OR vegetables and tofu OR seafood (+$2)',
+        'desc': 'Malaysian sweet and spicy soup with:',
+        'alt': ['Beef OR', 'Chicken OR', 'Vegetables and Tofu OR', 'Seafood (+$2)'],
     },
     {
         'price': 22.90,
         'name': 'Mi Thai (VGO)',
-        'desc': 'Pad Thai noodles with beef OR chicken OR vegetables and tofu OR seafood (+$3) OR chicken and prawns (+$3)',
+        'desc': 'Pad Thai noodles with: ',
+        'alt': ['Beef OR', 'Chicken OR', 'Vegetables and Tofu OR', 'Seafood (+$3) OR', 'Chicken and Prawns (+$3)'],
     },
     {
         'price': 22.90,
         'name': 'Singapore Noodles (VGO)',
-        'desc': 'Stir fried curried rice vermicelli noodles with beef OR chicken OR vegetables and tofu OR seafood (+$3) OR chicken and prawns (+$3)',
+        'desc': 'Stir fried curried rice vermicelli noodles with:',
+        'alt': ['Beef OR', 'Chicken OR', 'Vegetables and Tofu OR', 'Seafood (+$3) OR', 'Chicken and Prawns (+$3)'],
     },
     {
         'price': 22.90,
@@ -302,7 +315,8 @@ const menu_items_banquet = [
     {
         'price': 65.00,
         'name': 'Tea House Banquet',
-        'desc': 'Leave it to us to showcase our menu with dishes selected for you by our Chef (Price is PER PERSON, min 2 people)',
+        'desc': 'Leave it to us to showcase our menu with dishes selected for you by our Chef',
+        'alt': ['Price is PER PERSON', 'Minimum 2 people)'],
     },
 ];
 
@@ -316,7 +330,8 @@ const menu_items_sweets = [
     {
         'price': 10.90,
         'name': 'Ca Rem Chien (CG)',
-        'desc': 'Fried ice-cream with toasted peanuts served with coconut milk OR caramel sauce',
+        'desc': 'Fried ice-cream with toasted peanuts served with:',
+        'alt': ['Coconut Milk OR', 'Caramel Sauce'],
     },
     {
         'price': 10.90,
@@ -325,13 +340,15 @@ const menu_items_sweets = [
     },
     {
         'price': 5.00,
-        'name': 'Ca Rem Dua',
-        'desc': 'Coconut ice-cream topped with toasted peanuts and coconut flakes (1 scoop), (3 scoops +$5.90)',
+        'name': 'Ca Rem Dua (1 scoop)',
+        'desc': 'Coconut ice-cream topped with toasted peanuts and coconut flakes',
+        'alt': ['3 scoops +$5.90']
     },
     {
         'price': 5.00,
-        'name': 'Ca Rem Tra Xanh',
-        'desc': 'Refreshing green tea ice-cream topped with toasted peanuts (1 scoop), (3 scoops +$5.90)',
+        'name': 'Ca Rem Tra Xanh (1 scoop)',
+        'desc': 'Refreshing green tea ice-cream topped with toasted peanuts',
+        'alt': ['3 scoops +$5.90'],
     },
     {
         'price': 10.90,
@@ -341,7 +358,8 @@ const menu_items_sweets = [
     {
         'price': 10.90,
         'name': 'Coffee Affogato',
-        'desc': 'Espresso coffee served with vanilla ice-cream (liqueur +$5)',
+        'desc': 'Espresso coffee served with vanilla ice-cream',
+        'alt': ['Add Liqueur +$5'],
     },
 ];
 
@@ -349,8 +367,9 @@ const menu_items_sweets = [
 const menu_items_extras = [
     {
         'price': 5.00,
-        'name': 'Steamed Jasmine Rice / Rice Vermicelli Noodles',
-        'desc': 'Small, Medium (+$1), Large (+$2)',
+        'name': 'Steamed Jasmine Rice / Rice Vermicelli Noodles (Small)',
+        'desc': 'Medium (+$1)',
+        'alt': ['Large (+$2)'],
     },
     {
         'price': 12.00,
@@ -359,18 +378,19 @@ const menu_items_extras = [
     },
     {
         'price': 5.00,
-        'name': 'Steamed Chinese Buns / Deep Fried Chinese Buns',
+        'name': 'Steamed OR Deep Fried Chinese Buns',
         'desc': '',
     },
     {
         'price': 5.00,
-        'name': 'Extra Tofu OR Vegetables OR Beef OR Chicken',
-        'desc': '',
+        'name': 'Extra',
+        'desc': 'Tofu OR',
+        'alt': ['Vegetables OR', 'Beef OR', 'Chicken'],
     },
     {
         'price': 2.00,
         'name': 'Prawn',
-        'desc': 'Price is for 1 prawn',
+        'desc': 'Per prawn',
     },
     {
         'price': 0.50,
@@ -385,11 +405,11 @@ const menu_items_extras = [
     {
         'price': 0.50,
         'name': 'Take Away Containers',
-        'desc': 'Each container',
+        'desc': 'Per container',
     },
 ];
 
-const menu_items_html = ['span', 'div', 'div'];
+const menu_items_html = ['span', 'div', 'div', 'div'];
 const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc'];
 const diet = ["CG - Contains Gluten", "VGO - Vegan Option Available on Request", "VG - Vegan"];
 const menu_items = [
@@ -460,11 +480,12 @@ function generateMenu(menu_list, sub_menu, category, numbered = true) {
     container.appendChild(menu_section_title);
 
     let count = 0;
-    for(let row_i = 0; row_i < menu_list.length/3; row_i++) {
+    let num_columns = 2;
+    for(let row_i = 0; row_i < menu_list.length / num_columns; row_i++) {
         const row = document.createElement('div');
         row.className = 'row';
 
-        for(let col_i = 0; col_i < 3; col_i++) {
+        for(let col_i = 0; col_i < num_columns; col_i++) {
             const col = document.createElement('div');
             col.classList.add('col-sm', 'pb-3');
 
@@ -473,8 +494,15 @@ function generateMenu(menu_list, sub_menu, category, numbered = true) {
                 const menu_element = document.createElement(menu_items_html[menu_i]);
                 menu_element.className = menu_items_class[menu_i];
 
-                if(menu === 'price') {
-                    menu_element.innerText = "$" + menu_list[count][menu];
+                if(menu === 'alt') {
+                    console.log(menu)
+                    for(const alt of menu_list[count][menu]) {
+                        const alt_item = document.createElement('div');
+                        alt_item.innerText = alt;
+                        menu_element.appendChild(alt_item);
+                    }
+                } else if(menu === 'price') {
+                    menu_element.innerText = menu_list[count][menu];
                     menu_element.classList.add('fw-bold', 'ps-2', 'float-end');
                 } else if(menu === "name") {
                     menu_element.classList.add('fw-bold');
@@ -484,7 +512,6 @@ function generateMenu(menu_list, sub_menu, category, numbered = true) {
                     } else {
                         menu_element.innerText = menu_list[count][menu];
                     }
-                    
                 } else {
                     menu_element.innerText = menu_list[count][menu];
                 }

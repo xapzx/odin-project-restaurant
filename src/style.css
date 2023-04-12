@@ -163,11 +163,15 @@ main .social-icon {
     width: 70vw;
 }
 
+.menu-item-price::before {
+    content: "$";
+}
+
 .nav-link {
     color: #ffffff;
 }
 
-.nav-link:hover {
+.menu .nav-link:hover {
     color: var(--secondary-color);
 }
 
