@@ -393,15 +393,15 @@ const menu_items_html = ['span', 'div', 'div'];
 const menu_items_class = ['menu-item-price', 'menu-item-name', 'menu-item-desc'];
 const diet = ["CG - Contains Gluten", "VGO - Vegan Option Available on Request", "VG - Vegan"];
 const menu_items = [
-    { title: "Khai Vi/Entree", items: menu_items_entree, setNum: true },
-    { title: "Mon An Chinh/Mains", items: menu_items_mains, setNum: true },
-    { title: "Com Dia/Rice Dishes", items: menu_items_rice, setNum: true },
-    { title: "Bun/Noodle Salad Bowls", items: menu_items_noodle, setNum: true },
-    { title: "Goi/Salads", items: menu_items_salads, setNum: true },
-    { title: "Favourites", items: menu_items_favourites, setNum: true },
-    { title: "Banquet", items: menu_items_banquet, setNum: false },
-    { title: "Them/Extras", items: menu_items_extras, setNum: false },
-    { title: "Trang Mieng/Something Sweet", items: menu_items_sweets, setNum: false },
+    { title: "Khai Vi/Entree", items: menu_items_entree, category: 'entree', setNum: true },
+    { title: "Mon An Chinh/Mains", items: menu_items_mains, category: 'main', setNum: true },
+    { title: "Com Dia/Rice Dishes", items: menu_items_rice, category: 'rice', setNum: true },
+    { title: "Bun/Noodle Salad Bowls", items: menu_items_noodle, category: 'noodles', setNum: true },
+    { title: "Goi/Salads", items: menu_items_salads, category: 'salads', setNum: true },
+    { title: "Favourites", items: menu_items_favourites, category: 'favourites', setNum: true },
+    { title: "Banquet", items: menu_items_banquet, category: 'banquet', setNum: false },
+    { title: "Them/Extras", items: menu_items_extras, category: 'extras', setNum: false },
+    { title: "Trang Mieng/Something Sweet", items: menu_items_sweets, category: 'sweets', setNum: false },
 ];
 
 // Append generated HTML for all menu items with sub-titles to the main section
@@ -409,7 +409,7 @@ function menu() {
     item_id = 1;
     const main = document.querySelector('main');
     const container = document.createElement('div');
-    container.classList.add('menu', 'container', 'p-3');
+    container.classList.add('menu', 'container', 'p-3', 'rounded');
     
     const menu_section_title = document.createElement('div');
     menu_section_title.classList.add('text-center', 'menu-title', 'fw-bold');
@@ -426,10 +426,16 @@ function menu() {
         container.appendChild(dietary_container);
     }
 
+    container.appendChild(createMenuNav());
+
+    let tab_container = document.createElement('div');
+    tab_container.classList.add('tab-content');
+    tab_container.id = "nav-tabContent";
     for(const item of menu_items) {
-        container.appendChild(generateMenu(item.items, item.title, item.setNum));
+        tab_container.appendChild(generateMenu(item.items, item.title, item.category, item.setNum));
     }
-    
+    container.appendChild(tab_container);
+
     main.appendChild(container);
 }
 
@@ -438,8 +444,16 @@ function menu() {
 // Parameters: Array of menu item objects, title for menu section
 // Returns HTML for a section of menu items in rows of 3 items
 let item_id = 1;
-function generateMenu(menu_list, sub_menu, numbered = true) {
+function generateMenu(menu_list, sub_menu, category, numbered = true) {
     const container = document.createElement('div');
+    container.classList.add('tab-pane', 'fade', 'show');
+    if(category === 'entree') {
+        container.classList.add('active');
+    }
+    container.setAttribute('id', 'nav-' + category)
+    container.setAttribute('role', 'tabpanel');
+    container.setAttribute('aria-labelledby', 'nav-' + category + '-tab');
+
     const menu_section_title = document.createElement('div');
     menu_section_title.classList.add('text-center', 'menu-sub-title', 'pb-2', 'pt-2', 'fw-bold');
     menu_section_title.innerText = sub_menu;
@@ -484,6 +498,40 @@ function generateMenu(menu_list, sub_menu, numbered = true) {
         container.appendChild(row);
     }
     return container;
+}
+
+// Create Nav menu (pills) for menu category
+function createMenuNav() {
+    const nav_container = document.createElement('nav');
+    nav_container.classList.add('border-bottom', 'border-top', 'mb-3', 'rounded');
+    const nav_tab_wrapper = document.createElement('div');
+    nav_tab_wrapper.classList.add('nav', 'nav-pills', 'justify-content-center', 'rounded');
+    nav_tab_wrapper.setAttribute('id', 'nav-tab');
+    nav_tab_wrapper.setAttribute('role', 'tablist');
+
+    let count = 0;
+    for(const item of menu_items) {
+        const tab = document.createElement('button');
+        tab.className = 'nav-link';
+        if(!count) {
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+        } else {
+            tab.setAttribute('aria-selected', 'false');
+        }
+        tab.setAttribute('id', 'nav-' + item.category + '-tab');
+        tab.setAttribute('data-bs-toggle', 'tab');
+        tab.setAttribute('data-bs-target', '#nav-' + item.category);
+        tab.setAttribute('type', 'button');
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-controls', 'nav-' + item.category);
+        tab.innerText = item.category.charAt(0).toUpperCase() + item.category.slice(1);
+        nav_tab_wrapper.appendChild(tab);
+        count++;
+    }
+
+    nav_container.appendChild(nav_tab_wrapper);
+    return nav_container;
 }
 
 export default menu;

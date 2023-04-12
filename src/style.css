@@ -159,8 +159,25 @@ main .social-icon {
 
 .menu {
     background-color: var(--primary-color);
-    opacity: 0.9;
+    /* opacity: 0.9; */
     width: 70vw;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.nav-pills {
+    background-color: var(--contrast-color);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Footer Styling */

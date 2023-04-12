@@ -7,10 +7,10 @@ function contact() {
 
     const main = document.querySelector('main');
     const container = document.createElement('div');
-    container.classList.add('menu', 'container', 'p-4');
+    container.classList.add('menu', 'container', 'p-4', 'rounded');
     
     const contact_section_title = document.createElement('div');
-    contact_section_title.classList.add('text-center', 'menu-title', 'pb-3');
+    contact_section_title.classList.add('text-center', 'menu-title', 'pb-3', 'fw-bold');
     contact_section_title.innerText = "Contact";
     container.appendChild(contact_section_title);
 
