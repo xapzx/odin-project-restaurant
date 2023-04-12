@@ -9905,7 +9905,7 @@ module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/bbh-32bbe063aea286e6aeaa.jpg";
+module.exports = __webpack_require__.p + "images/bbh-0de960419c505efe372f.jpg";
 
 /***/ }),
 
@@ -9915,7 +9915,7 @@ module.exports = __webpack_require__.p + "images/bbh-32bbe063aea286e6aeaa.jpg";
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/chicken-5feffba70ded8365a08a.jpg";
+module.exports = __webpack_require__.p + "images/chicken-8f21f810e8afcaaea23d.jpg";
 
 /***/ }),
 
@@ -9935,7 +9935,7 @@ module.exports = __webpack_require__.p + "images/close-0f8e48cbdb6d77e30219.svg"
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/coldrolls-8a694323851433ed2097.jpg";
+module.exports = __webpack_require__.p + "images/coldrolls-5ac520e6143fc52bfb4b.jpg";
 
 /***/ }),
 
@@ -9955,7 +9955,7 @@ module.exports = __webpack_require__.p + "images/facebook-4d4460260f64103d8da4.s
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/friedrice-29fbdae2ceac51c7ae4c.jpg";
+module.exports = __webpack_require__.p + "images/friedrice-00cb57eadcce5c4e4a85.jpg";
 
 /***/ }),
 
@@ -9975,7 +9975,7 @@ module.exports = __webpack_require__.p + "images/hamburger-menu-4a5a0b57f99b67b9
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/laksa-d0e552a5953586b23114.jpg";
+module.exports = __webpack_require__.p + "images/laksa-f9cd81be78d95607646d.jpg";
 
 /***/ }),
 
@@ -9985,7 +9985,7 @@ module.exports = __webpack_require__.p + "images/laksa-d0e552a5953586b23114.jpg"
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/padthai-ab34fc58f3a7dc62d6aa.jpg";
+module.exports = __webpack_require__.p + "images/padthai-42f49e97113d75177b62.jpg";
 
 /***/ }),
 
